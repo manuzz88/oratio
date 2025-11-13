@@ -6,6 +6,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from typing import Dict, Any
 from pathlib import Path
+import sys
+import os
+
+# Import errori
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from compiler.errors import RuntimeError as OratioRuntimeError
 
 
 class Runtime:
@@ -47,16 +53,28 @@ class Runtime:
         op_type = op['type']
         params = op.get('params', {})
         
-        # Risolvi variabili nei parametri
-        resolved_params = self._resolve_params(params)
-        
-        # Ottieni handler
-        handler = self.operations.get(op_type)
-        if not handler:
-            raise ValueError(f"Operazione non supportata: {op_type}")
-        
-        # Esegui
-        return handler(**resolved_params)
+        try:
+            # Risolvi variabili nei parametri
+            resolved_params = self._resolve_params(params)
+            
+            # Ottieni handler
+            handler = self.operations.get(op_type)
+            if not handler:
+                raise OratioRuntimeError(
+                    f"Operazione non supportata: {op_type}",
+                    operation=op_type
+                )
+            
+            # Esegui
+            return handler(**resolved_params)
+            
+        except OratioRuntimeError:
+            raise
+        except Exception as e:
+            raise OratioRuntimeError(
+                f"Errore durante esecuzione: {e}",
+                operation=op_type
+            )
     
     def _resolve_params(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """Risolve variabili nei parametri"""
