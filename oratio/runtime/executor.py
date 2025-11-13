@@ -134,6 +134,12 @@ class Runtime:
             # Visualization
             'viz.plot': self._op_plot,
             'viz.bar': self._op_bar_chart,
+            # Drawing
+            'viz.draw_point': self._op_draw_point,
+            'viz.draw_circle': self._op_draw_circle,
+            'viz.draw_line': self._op_draw_line,
+            'viz.create_canvas': self._op_create_canvas,
+            'viz.save_image': self._op_save_image,
         }
     
     # === OPERAZIONI ===
@@ -557,6 +563,129 @@ class Runtime:
     
     def _op_string_lower(self, source=None, column: str = None, **kwargs):
         return source
+    
+    # === OPERAZIONI GRAFICHE ===
+    
+    def _op_create_canvas(self, width: int = 400, height: int = 400, 
+                          background: str = 'white', **kwargs):
+        """Crea una tela per disegnare"""
+        import matplotlib.pyplot as plt
+        
+        fig, ax = plt.subplots(figsize=(width/100, height/100))
+        ax.set_xlim(0, width)
+        ax.set_ylim(0, height)
+        ax.set_aspect('equal')
+        ax.set_facecolor(background)
+        
+        # Nascondi assi
+        ax.set_xticks([])
+        ax.set_yticks([])
+        
+        print(f"    ✓ Canvas creato: {width}x{height}px")
+        
+        # Salva riferimenti
+        self.memory['_current_fig'] = fig
+        self.memory['_current_ax'] = ax
+        
+        return ax
+    
+    def _op_draw_point(self, x: float = None, y: float = None, 
+                       color: str = 'red', size: int = 100, **kwargs):
+        """Disegna un punto"""
+        import matplotlib.pyplot as plt
+        
+        # Se non c'è canvas, creane uno
+        if '_current_ax' not in self.memory:
+            self._op_create_canvas()
+        
+        ax = self.memory['_current_ax']
+        
+        # Se x,y non specificati, metti al centro
+        if x is None:
+            x = ax.get_xlim()[1] / 2
+        if y is None:
+            y = ax.get_ylim()[1] / 2
+        
+        # Disegna punto
+        ax.scatter([x], [y], c=color, s=size, zorder=10)
+        
+        print(f"    ✓ Punto {color} disegnato in ({x}, {y})")
+        
+        return (x, y)
+    
+    def _op_draw_circle(self, x: float = None, y: float = None, 
+                        radius: float = 50, color: str = 'blue', 
+                        fill: bool = True, **kwargs):
+        """Disegna un cerchio"""
+        import matplotlib.pyplot as plt
+        import matplotlib.patches as patches
+        
+        # Se non c'è canvas, creane uno
+        if '_current_ax' not in self.memory:
+            self._op_create_canvas()
+        
+        ax = self.memory['_current_ax']
+        
+        # Se x,y non specificati, metti al centro
+        if x is None:
+            x = ax.get_xlim()[1] / 2
+        if y is None:
+            y = ax.get_ylim()[1] / 2
+        
+        # Disegna cerchio
+        circle = patches.Circle((x, y), radius, 
+                               color=color, 
+                               fill=fill,
+                               zorder=5)
+        ax.add_patch(circle)
+        
+        print(f"    ✓ Cerchio {color} disegnato in ({x}, {y}), raggio {radius}")
+        
+        return circle
+    
+    def _op_draw_line(self, x1: float, y1: float, x2: float, y2: float,
+                      color: str = 'black', width: float = 2, **kwargs):
+        """Disegna una linea"""
+        import matplotlib.pyplot as plt
+        
+        # Se non c'è canvas, creane uno
+        if '_current_ax' not in self.memory:
+            self._op_create_canvas()
+        
+        ax = self.memory['_current_ax']
+        
+        # Disegna linea
+        ax.plot([x1, x2], [y1, y2], color=color, linewidth=width, zorder=5)
+        
+        print(f"    ✓ Linea {color} disegnata da ({x1},{y1}) a ({x2},{y2})")
+        
+        return ((x1, y1), (x2, y2))
+    
+    def _op_save_image(self, filename: str = 'output.png', **kwargs):
+        """Salva l'immagine"""
+        import matplotlib.pyplot as plt
+        
+        if '_current_fig' not in self.memory:
+            raise OratioRuntimeError("Nessun canvas da salvare. Crea prima un disegno.")
+        
+        fig = self.memory['_current_fig']
+        
+        # Salva
+        fig.savefig(filename, dpi=150, bbox_inches='tight', 
+                   facecolor='white', edgecolor='none')
+        
+        print(f"    ✓ Immagine salvata: {filename}")
+        
+        # Chiudi figura
+        plt.close(fig)
+        
+        # Pulisci memoria
+        if '_current_fig' in self.memory:
+            del self.memory['_current_fig']
+        if '_current_ax' in self.memory:
+            del self.memory['_current_ax']
+        
+        return filename
 
 
 if __name__ == "__main__":

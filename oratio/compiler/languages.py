@@ -76,6 +76,11 @@ Math:
 Viz:
 - viz.plot: Grafico linee
 - viz.bar: Grafico barre
+- viz.draw_point: Disegna punto
+- viz.draw_circle: Disegna cerchio
+- viz.draw_line: Disegna linea
+- viz.create_canvas: Crea tela
+- viz.save_image: Salva immagine
 
 FORMATO IR:
 {
@@ -136,6 +141,11 @@ Math:
 Viz:
 - viz.plot: Line chart
 - viz.bar: Bar chart
+- viz.draw_point: Draw point
+- viz.draw_circle: Draw circle
+- viz.draw_line: Draw line
+- viz.create_canvas: Create canvas
+- viz.save_image: Save image
 
 IR FORMAT:
 {
