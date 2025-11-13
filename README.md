@@ -2,169 +2,165 @@
 
 # 🗣️ ORATIO
 
-**L'Eloquenza del Codice**
+**The Eloquence of Code**
 
-*Il primo vero linguaggio di programmazione naturale*
+*The first true natural language programming language*
 
 [\![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [\![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [\![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)]()
 
-[🌐 Website](https://oratio.dev) • [📚 Docs](https://docs.oratio.dev) • [💬 Community](https://discord.gg/oratio)
+[🌐 Website](https://oratio.dev) • [📚 Docs](https://docs.oratio.dev) • [💬 Community](https://t.me/manu_lz88)
 
 ---
 
 ### 🇮🇹 Parli Italiano. 🇬🇧 Speak English. 🇪🇸 Hablas Español.
-### Il Computer Capisce.
+### The Computer Understands.
 
 ---
 
+[🇮🇹 Leggi in Italiano](README_IT.md)
+
 </div>
 
-## 🎯 Cos'è ORATIO?
+## 🎯 What is ORATIO?
 
-**ORATIO** è il primo linguaggio di programmazione che capisce veramente la tua lingua.
+**ORATIO** is the first programming language that truly understands your language.
 
-Non più sintassi da imparare. Non più codice criptico. **Parli, funziona.**
+No more syntax to learn. No more cryptic code. **You speak, it works.**
 
 ```ora
-# Questo è codice ORATIO
-Carica vendite.csv.
-Filtra le righe dove importo > 1000.
-Calcola la media.
-Crea un grafico a barre.
-Stampa "Analisi completata\!"
+# This is ORATIO code
+Load sales.csv.
+Filter rows where amount > 1000.
+Calculate the average.
+Create a bar chart.
+Print "Analysis completed\!"
 ```
 
-**Funziona. Davvero.**
+**It works. Really.**
 
 ---
 
 ## 🚀 Quick Start
 
-### Installazione
+### Installation
 
 ```bash
 pip install oratio
 ```
 
-### Il Tuo Primo Programma
+### Your First Program
 
 ```bash
-# Crea un file
-echo "Stampa 'Ciao Mondo\!'" > hello.ora
+# Create a file
+echo "Print 'Hello World\!'" > hello.ora
 
-# Esegui
+# Run it
 oratio run hello.ora
 ```
 
 **Output:**
 ```
-📄 Ciao Mondo\!
+📄 Hello World\!
 ```
 
 ---
 
-## ✨ Perché ORATIO?
+## ✨ Why ORATIO?
 
-### Prima (Python)
+### Before (Python)
 ```python
 import pandas as pd
-df = pd.read_csv('vendite.csv')
-filtered = df[df['importo'] > 1000]
-mean = filtered['importo'].mean()
-print(f"Media: {mean}")
+df = pd.read_csv('sales.csv')
+filtered = df[df['amount'] > 1000]
+mean = filtered['amount'].mean()
+print(f"Average: {mean}")
 ```
-❌ Complesso, sintassi rigida, devi sapere Python
+❌ Complex, rigid syntax, you need to know Python
 
-### Ora (ORATIO)
+### Now (ORATIO)
 ```ora
-Carica vendite.csv.
-Filtra dove importo > 1000.
-Calcola la media.
-Stampa il risultato.
+Load sales.csv.
+Filter where amount > 1000.
+Calculate the average.
+Print the result.
 ```
-✅ Semplice, naturale, immediato
+✅ Simple, natural, immediate
 
 ---
 
-## 🌍 Multilingua
+## 🌍 Multilingual
 
-ORATIO parla la TUA lingua:
+ORATIO speaks YOUR language:
 
 ```ora
-# 🇮🇹 Italiano
+# 🇮🇹 Italian
 Carica dati.csv e calcola la media.
 
 # 🇬🇧 English  
 Load data.csv and calculate the average.
 
-# 🇪🇸 Español (Coming Q2 2026)
+# 🇪🇸 Spanish (Coming Q2 2026)
 Carga datos.csv y calcula el promedio.
 ```
 
 ---
 
-## 📊 Cosa Puoi Fare
+## 📊 What You Can Do
 
-- ✅ Analisi dati (CSV, Excel, JSON)
-- ✅ Statistiche e calcoli
-- ✅ Visualizzazioni e grafici
-- ✅ Filtri e trasformazioni
-- ✅ Report automatici
-- ✅ Automazione workflow
+- ✅ Data analysis (CSV, Excel, JSON)
+- ✅ Statistics and calculations
+- ✅ Visualizations and charts
+- ✅ Filters and transformations
+- ✅ Automated reports
+- ✅ Workflow automation
 
-**Prossimamente:**
-- 🔜 Database (SQL, MongoDB)
-- 🔜 API e Web scraping
+**Coming Soon:**
+- 🔜 Databases (SQL, MongoDB)
+- 🔜 APIs and Web scraping
 - 🔜 Machine Learning
-- 🔜 Controllo robot e IoT
+- 🔜 Robot and IoT control
 
 ---
 
-## 🎬 Demo
+## 📚 Examples
 
-\![ORATIO Demo](website/video_demo_oratio.mp4)
-
----
-
-## 📚 Esempi
-
-### Analisi Vendite
+### Sales Analysis
 ```ora
-Carica vendite.csv.
-Mostra le prime 5 righe.
-Filtra dove importo > 1000.
-Calcola la media della colonna importo.
-Crea un grafico a barre.
-Salva come report.pdf.
+Load sales.csv.
+Show first 5 rows.
+Filter where amount > 1000.
+Calculate average of amount column.
+Create a bar chart.
+Save as report.pdf.
 ```
 
-### Statistiche
+### Statistics
 ```ora
-Carica dati.csv.
-Calcola media, mediana e deviazione standard.
-Crea un istogramma.
-Stampa i risultati.
+Load data.csv.
+Calculate mean, median and standard deviation.
+Create a histogram.
+Print the results.
 ```
 
-### Automazione
+### Automation
 ```ora
-Per ogni file in cartella_dati:
-    Carica il file.
-    Filtra dove valore > 100.
-    Salva in cartella_risultati.
-Stampa "Elaborazione completata\!"
+For each file in data_folder:
+    Load the file.
+    Filter where value > 100.
+    Save in results_folder.
+Print "Processing completed\!"
 ```
 
 ---
 
-## 🏗️ Architettura
+## 🏗️ Architecture
 
 ```
 ┌─────────────────────────────────────┐
-│  Linguaggio Naturale                │
-│  "Carica dati e calcola media"      │
+│  Natural Language                   │
+│  "Load data and calculate average"  │
 └─────────────────────────────────────┘
               ↓
 ┌─────────────────────────────────────┐
@@ -183,27 +179,27 @@ Stampa "Elaborazione completata\!"
 └─────────────────────────────────────┘
               ↓
 ┌─────────────────────────────────────┐
-│  Risultato                          │
+│  Result                             │
 └─────────────────────────────────────┘
 ```
 
 ---
 
-## 🤝 Contribuire
+## 🤝 Contributing
 
-ORATIO è open source\! Contribuisci:
+ORATIO is open source\! Contribute by:
 
-1. **Nuove Operazioni** - Aggiungi funzionalità
-2. **Connettori** - Integra nuovi servizi
-3. **Bug Fix** - Migliora la stabilità
-4. **Documentazione** - Aiuta gli altri
-5. **Traduzioni** - Porta ORATIO nella tua lingua
+1. **New Operations** - Add functionality
+2. **Connectors** - Integrate new services
+3. **Bug Fixes** - Improve stability
+4. **Documentation** - Help others
+5. **Translations** - Bring ORATIO to your language
 
-Leggi [CONTRIBUTING.md](CONTRIBUTING.md) per iniziare.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
 ---
 
-## 📖 Documentazione
+## 📖 Documentation
 
 - [Getting Started](docs/getting-started.md)
 - [Language Guide](docs/language-guide.md)
@@ -215,25 +211,25 @@ Leggi [CONTRIBUTING.md](CONTRIBUTING.md) per iniziare.
 
 ## 🗺️ Roadmap
 
-### ✅ Fase 1: Foundation (Q4 2025)
+### ✅ Phase 1: Foundation (Q4 2025)
 - [x] Core runtime
 - [x] Basic operations
 - [x] CLI
 - [x] Italian support
 
-### 🚧 Fase 2: Expansion (Q1 2026)
+### 🚧 Phase 2: Expansion (Q1 2026)
 - [ ] English support (Beta)
 - [ ] Cloud platform
 - [ ] IDE integration
 - [ ] Plugin system
 
-### 🔮 Fase 3: Scale (Q2-Q3 2026)
+### 🔮 Phase 3: Scale (Q2-Q3 2026)
 - [ ] Spanish, French support
 - [ ] Database connectors
 - [ ] ML operations
 - [ ] Robot/IoT control
 
-### 🌍 Fase 4: Global (2027+)
+### 🌍 Phase 4: Global (2027+)
 - [ ] 10+ languages
 - [ ] Enterprise features
 - [ ] Marketplace
@@ -241,17 +237,17 @@ Leggi [CONTRIBUTING.md](CONTRIBUTING.md) per iniziare.
 
 ---
 
-## 📜 Licenza
+## 📜 License
 
-MIT License - vedi [LICENSE](LICENSE)
+MIT License - see [LICENSE](LICENSE)
 
 ---
 
-## 👨‍💻 Creatore
+## 👨‍💻 Creator
 
 **Manuel Lazzaro**
 
-*"Il futuro della programmazione non si scrive. Si parla."*
+*"The future of programming isn't written. It's spoken."*
 
 - 🌐 [oratio.dev](https://oratio.dev)
 - 🐦 [@oratio_lang](https://twitter.com/oratio_lang)
@@ -260,22 +256,22 @@ MIT License - vedi [LICENSE](LICENSE)
 
 ---
 
-## 🌟 Supporta il Progetto
+## 🌟 Support the Project
 
-Se ORATIO ti piace:
+If you like ORATIO:
 
-- ⭐ Metti una stella su GitHub
-- 🐦 Condividi su Twitter
-- 💬 Unisciti alla community
-- 🤝 Contribuisci al codice
+- ⭐ Star on GitHub
+- 🐦 Share on Twitter
+- 💬 Join the community
+- 🤝 Contribute code
 
 ---
 
 ## 📊 Stats
 
-\![GitHub stars](https://img.shields.io/github/stars/manuellazzaro/oratio?style=social)
-\![GitHub forks](https://img.shields.io/github/forks/manuellazzaro/oratio?style=social)
-\![GitHub watchers](https://img.shields.io/github/watchers/manuellazzaro/oratio?style=social)
+\![GitHub stars](https://img.shields.io/github/stars/manuzz88/oratio?style=social)
+\![GitHub forks](https://img.shields.io/github/forks/manuzz88/oratio?style=social)
+\![GitHub watchers](https://img.shields.io/github/watchers/manuzz88/oratio?style=social)
 
 ---
 
@@ -283,8 +279,8 @@ Se ORATIO ti piace:
 
 **Made with ❤️ in Italy 🇮🇹**
 
-*ORATIO - L'Eloquenza del Codice*
+*ORATIO - The Eloquence of Code*
 
-**13 Novembre 2025 - Il Giorno in cui la Programmazione è Cambiata per Sempre**
+**November 13, 2025 - The Day Programming Changed Forever**
 
 </div>
