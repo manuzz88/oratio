@@ -256,6 +256,7 @@ MIT License - vedi [LICENSE](LICENSE)
 - 🌐 [oratio.dev](https://oratio.dev)
 - 🐦 [@oratio_lang](https://twitter.com/oratio_lang)
 - 💼 [LinkedIn](https://linkedin.com/in/manuellazzaro)
+- 💬 Telegram: [@manu_lz88](https://t.me/manu_lz88)
 
 ---
 

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORATIO - L'Eloquenza del Codice</title>
+    <meta name="description" content="Il primo vero linguaggio di programmazione naturale italiano. Parla e programma.">
+    <link rel="icon" type="image/png" href="favicon_oratio.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="logo_oratio.png" alt="ORATIO" class="logo-img">
+            </div>
+            
+            <!-- Hamburger Button -->
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Nav Menu -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#docs">Docs</a></li>
+                <li class="lang-selector">
+                    <button class="lang-btn active" aria-label="Italiano">🇮🇹 IT</button>
+                    <button class="lang-btn" onclick="window.location='index-en.html'" aria-label="English">🇬🇧 EN</button>
+                </li>
+                <li><a href="#download" class="btn-primary">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">ORATIO</div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    LA FINE DELLA<br>
+                    PROGRAMMAZIONE<br>
+                    <span class="gradient-text">COME LA CONOSCIAMO</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Per 70 anni hai dovuto imparare Python, Java, C++.<br>
+                    <strong>Oggi parli la tua lingua. Domani tutti programmano.</strong>
+                </p>
+                <div class="hero-impact">
+                    <div class="impact-item">
+                        <span class="impact-before">4 anni</span>
+                        <span class="impact-arrow">→</span>
+                        <span class="impact-after">5 minuti</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-before">Solo ingegneri</span>
+                        <span class="impact-arrow">→</span>
+                        <span class="impact-after">Chiunque</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-before">Sintassi artificiale</span>
+                        <span class="impact-arrow">→</span>
+                        <span class="impact-after">Lingua naturale</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-large btn-primary btn-glow">
+                        Unisciti alla Rivoluzione
+                    </a>
+                    <a href="#demo" class="btn btn-large btn-secondary">
+                        Vedi in Azione
+                    </a>
+                </div>
+                <div class="hero-social-proof">
+                    <p>Primo vero linguaggio naturale • Made in Italy • Open Source</p>
+                </div>
+            </div>
+            <div class="hero-code">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="code-dot"></span>
+                        <span class="code-dot"></span>
+                        <span class="code-dot"></span>
+                        <span class="code-title">analisi.ora</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="comment"># Questo è codice ORATIO</span>
+<span class="keyword">Carica</span> vendite.csv.
+<span class="keyword">Filtra</span> le righe dove importo > 1000.
+<span class="keyword">Calcola</span> la media.
+<span class="keyword">Crea</span> un grafico a barre.
+<span class="keyword">Stampa</span> "Analisi completata!"</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revolution Section -->
+    <section class="revolution">
+        <div class="container">
+            <div class="revolution-header">
+                <span class="revolution-badge">LA STORIA CHE STIAMO SCRIVENDO</span>
+                <h2 class="section-title">Ogni 30 Anni, Una Rivoluzione</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1965</div>
+                    <div class="timeline-content">
+                        <h3>BASIC</h3>
+                        <p>"Programmazione per tutti"</p>
+                        <span class="timeline-impact">10M programmatori</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1991</div>
+                    <div class="timeline-content">
+                        <h3>Python</h3>
+                        <p>"Semplice da leggere"</p>
+                        <span class="timeline-impact">100M programmatori</span>
+                    </div>
+                </div>
+                <div class="timeline-item active">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>ORATIO</h3>
+                        <p>"Non serve più leggere codice"</p>
+                        <span class="timeline-impact">7B persone possono programmare</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="revolution-stats">
+                <div class="revolution-stat">
+                    <div class="revolution-stat-number">7 Miliardi</div>
+                    <div class="revolution-stat-label">Persone escluse dalla programmazione</div>
+                    <div class="revolution-stat-action">ORATIO le include TUTTE</div>
+                </div>
+                <div class="revolution-stat">
+                    <div class="revolution-stat-number">99%</div>
+                    <div class="revolution-stat-label">Del tempo speso a imparare sintassi</div>
+                    <div class="revolution-stat-action">ORATIO lo elimina</div>
+                </div>
+                <div class="revolution-stat">
+                    <div class="revolution-stat-number">$1 Trilione</div>
+                    <div class="revolution-stat-label">Mercato della programmazione</div>
+                    <div class="revolution-stat-action">ORATIO lo democratizza</div>
+                </div>
+            </div>
+
+            <div class="revolution-quote">
+                <blockquote>
+                    "Il futuro della programmazione non si scrive. Si parla.<br>
+                    E oggi, per la prima volta nella storia, si parla nella tua lingua."
+                </blockquote>
+                <cite>— Manuel Lazzaro, Creatore di ORATIO</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Italian First Section -->
+    <section class="italian-first">
+        <div class="container">
+            <div class="italian-first-content">
+                <div class="italian-first-flag">Italia</div>
+                <h2 class="section-title">Italian First, Global Second</h2>
+                <p class="italian-first-subtitle">
+                    ORATIO nasce in italiano per una ragione precisa
+                </p>
+                
+                <div class="italian-first-grid">
+                    <div class="italian-first-card">
+                        <h3>Perché Italiano Prima?</h3>
+                        <ul>
+                            <li><strong>Zero competizione</strong> - Nessun altro linguaggio naturale</li>
+                            <li><strong>Validazione rapida</strong> - Testiamo tutto perfettamente</li>
+                            <li><strong>Community locale</strong> - Feedback immediato e diretto</li>
+                            <li><strong>Orgoglio italiano</strong> - Primo vero linguaggio naturale</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="italian-first-card highlight">
+                        <h3>Universale Roadmap Globale</h3>
+                        <div class="roadmap-timeline">
+                            <div class="roadmap-step active">
+                                <span class="roadmap-date">Ora</span>
+                                <span class="roadmap-lang">Italia Italiano</span>
+                                <span class="roadmap-status">✓ Live</span>
+                            </div>
+                            <div class="roadmap-step">
+                                <span class="roadmap-date">Q1 2026</span>
+                                <span class="roadmap-lang">🇬🇧 English</span>
+                                <span class="roadmap-status">Coming</span>
+                            </div>
+                            <div class="roadmap-step">
+                                <span class="roadmap-date">Q2 2026</span>
+                                <span class="roadmap-lang">🇪🇸 Español</span>
+                                <span class="roadmap-status">Planned</span>
+                            </div>
+                            <div class="roadmap-step">
+                                <span class="roadmap-date">Q3 2026</span>
+                                <span class="roadmap-lang">🇫🇷 Français</span>
+                                <span class="roadmap-status">Planned</span>
+                            </div>
+                            <div class="roadmap-step">
+                                <span class="roadmap-date">2027</span>
+                                <span class="roadmap-lang">Universale 10+ Lingue</span>
+                                <span class="roadmap-status">Vision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="italian-first-quote">
+                    <p>
+                        "Iniziamo in italiano per perfezionare tutto. Una volta che funziona perfettamente in una lingua,
+                        espandere a inglese, spagnolo, francese e oltre sarà questione di settimane, non anni."
+                    </p>
+                    <cite>— La Strategia ORATIO</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Robotics Section -->
+    <section class="robotics">
+        <div class="container">
+            <div class="robotics-header">
+                <span class="robotics-badge">IL FUTURO DELLA ROBOTICA</span>
+                <h2 class="section-title">ORATIO: Il Linguaggio dei Robot</h2>
+                <p class="robotics-subtitle">
+                    Alexa capisce "Accendi la luce". ORATIO permette di PROGRAMMARE:<br>
+                    "Se la temperatura supera 25°C, accendi il condizionatore e invia notifica".<br>
+                    <strong>Non comandi vocali. Programmazione vera nella tua lingua.</strong>
+                </p>
+            </div>
+
+            <div class="robotics-vision">
+                <div class="robotics-timeline-future">
+                    <div class="future-phase">
+                        <div class="future-year">2025-2026</div>
+                        <div class="future-content">
+                            <h3>Fase 1: Programmazione</h3>
+                            <p>Analisi dati, automazione, script</p>
+                        </div>
+                    </div>
+                    <div class="future-phase highlight">
+                        <div class="future-year">2027-2028</div>
+                        <div class="future-content">
+                            <h3>Fase 2: Robotica</h3>
+                            <p>Robot domestici, industriali, droni</p>
+                        </div>
+                    </div>
+                    <div class="future-phase">
+                        <div class="future-year">2029+</div>
+                        <div class="future-content">
+                            <h3>Fase 3: IoT Universale</h3>
+                            <p>Ogni dispositivo capisce ORATIO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="robotics-examples">
+                <div class="robotics-example">
+                    <div class="robotics-icon">Robot Domestici</div>
+                    <h3>Robot Domestici</h3>
+                    <div class="code-example">
+                        <code>Se nessuno è in casa per più di 2 ore, il robot controlla tutte le stanze, chiude le finestre aperte e invia un report con foto.</code>
+                    </div>
+                    <p>Logica complessa, non solo comandi semplici</p>
+                </div>
+
+                <div class="robotics-example">
+                    
+                    <h3>Robot Industriali</h3>
+                    <div class="code-example">
+                        <code>Per ogni pacco in arrivo, verifica il peso, se supera 20kg usa il braccio rinforzato, altrimenti usa quello standard. Registra tutto nel database.</code>
+                    </div>
+                    <p>Operai programmano workflow complessi senza codice</p>
+                </div>
+
+                <div class="robotics-example">
+                    
+                    <h3>Droni</h3>
+                    <div class="code-example">
+                        <code>Ispeziona il perimetro ogni 30 minuti. Se rilevi movimento, scatta foto, invia alert e segui l'oggetto mantenendo 10 metri di distanza.</code>
+                    </div>
+                    <p>Automazione intelligente, non solo telecomando vocale</p>
+                </div>
+            </div>
+
+            <div class="robotics-impact">
+                <h3>L'Impatto sulla Robotica</h3>
+                <div class="robotics-stats-grid">
+                    <div class="robotics-stat-card">
+                        <div class="robotics-stat-icon">Costi</div>
+                        <div class="robotics-stat-title">Costi -90%</div>
+                        <p>Programmazione robot da $10,000 a $1,000</p>
+                    </div>
+                    <div class="robotics-stat-card">
+                        <div class="robotics-stat-icon">Velocità</div>
+                        <div class="robotics-stat-title">Setup 100x Più Veloce</div>
+                        <p>Da settimane a minuti per configurare un robot</p>
+                    </div>
+                    <div class="robotics-stat-card">
+                        <div class="robotics-stat-icon">Accessibilità</div>
+                        <div class="robotics-stat-title">Accessibile a Tutti</div>
+                        <p>Chiunque può comandare e programmare robot</p>
+                    </div>
+                    <div class="robotics-stat-card">
+                        <div class="robotics-stat-icon">Universale</div>
+                        <div class="robotics-stat-title">Standard Universale</div>
+                        <p>Un linguaggio per tutti i robot del mondo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="robotics-quote">
+                <blockquote>
+                    "Alexa e Siri capiscono comandi semplici: 'Accendi la luce'.<br>
+                    ORATIO permette di PROGRAMMARE robot con logica complessa:<br>
+                    'Se la temperatura supera 25 gradi per più di 10 minuti, attiva il condizionatore e invia notifica'.<br><br>
+                    La differenza? Comandi vocali vs Programmazione vera nella tua lingua."
+                </blockquote>
+                <cite>— La Vera Differenza</cite>
+            </div>
+
+            <div class="robotics-market">
+                <h3>Il Mercato della Robotica</h3>
+                <div class="market-stats">
+                    <div class="market-stat">
+                        <span class="market-number">$150B</span>
+                        <span class="market-label">Mercato robotica 2030</span>
+                    </div>
+                    <div class="market-stat">
+                        <span class="market-number">100M+</span>
+                        <span class="market-label">Robot entro 2035</span>
+                    </div>
+                    <div class="market-stat">
+                        <span class="market-number">1 Linguaggio</span>
+                        <span class="market-label">ORATIO per tutti</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Perché ORATIO è Rivoluzionario</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    
+                    <h3>Linguaggio Naturale</h3>
+                    <p>Parli la tua lingua, funziona. Nessuna sintassi da imparare, nessun codice criptico.</p>
+                </div>
+                <div class="feature-card">
+                    
+                    <h3>Esecuzione Diretta</h3>
+                    <p>Non genera Python. Esegue direttamente. Nessun copia/incolla, nessun intermediario.</p>
+                </div>
+                <div class="feature-card">
+                    
+                    <h3>Context-Aware</h3>
+                    <p>Ricorda cosa hai fatto. Capisce il contesto. Si adatta al tuo stile.</p>
+                </div>
+                <div class="feature-card">
+                    
+                    <h3>Tollerante</h3>
+                    <p>Errori di battitura? No problem. Grammatica imperfetta? Funziona lo stesso.</p>
+                </div>
+                <div class="feature-card">
+                    
+                    <h3>Evolutivo</h3>
+                    <p>Impara dalle tue preferenze. Più lo usi, più diventa tuo.</p>
+                </div>
+                <div class="feature-card">
+                    
+                    <h3>Italian First</h3>
+                    <p>Prima una lingua, poi globale. Democratizza la programmazione.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Not ChatGPT Section -->
+    <section class="why-not-chatgpt">
+        <div class="container">
+            <div class="why-header">
+                <span class="why-badge">LA DOMANDA CRUCIALE</span>
+                <h2 class="section-title">Perché Non Usare ChatGPT?</h2>
+                <p class="why-subtitle">
+                    ChatGPT, Claude, DeepSeek generano codice Python.<br>
+                    ORATIO <strong>È</strong> il codice. Questa è la differenza.
+                </p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-row table-header">
+                    <div class="comparison-cell"></div>
+                    <div class="comparison-cell">ChatGPT / Claude</div>
+                    <div class="comparison-cell table-highlight">ORATIO</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell label">Cosa fa</div>
+                    <div class="comparison-cell">
+                        
+                        <p>Genera codice Python nell'IDE (devi saperlo leggere)</p>
+                    </div>
+                    <div class="comparison-cell highlight">
+                        
+                        <p>Esegue direttamente, zero Python generato</p>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell label">Workflow</div>
+                    <div class="comparison-cell">
+                        
+                        <p>Chiedi → AI genera Python → Devi capirlo → Debug → Ripeti</p>
+                    </div>
+                    <div class="comparison-cell highlight">
+                        
+                        <p>Scrivi nella tua lingua → Esegui. Fine.</p>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell label">Riproducibilità</div>
+                    <div class="comparison-cell">
+                        
+                        <p>Ogni volta genera codice diverso</p>
+                    </div>
+                    <div class="comparison-cell highlight">
+                        
+                        <p>Stesso input = Stesso output sempre</p>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell label">Versioning</div>
+                    <div class="comparison-cell">
+                        
+                        <p>Impossibile fare Git del prompt</p>
+                    </div>
+                    <div class="comparison-cell highlight">
+                        
+                        <p>File .ora in Git come qualsiasi codice</p>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell label">Debugging</div>
+                    <div class="comparison-cell">
+                        
+                        <p>Debug del Python generato dall'AI (devi sapere Python!)</p>
+                    </div>
+                    <div class="comparison-cell highlight">
+                        
+                        <p>Errori nella tua lingua, zero Python da capire</p>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell label">Costo</div>
+                    <div class="comparison-cell">
+                        
+                        <p>$20/mese + API calls ogni volta</p>
+                    </div>
+                    <div class="comparison-cell highlight">
+                        
+                        <p>Open source, esegui localmente gratis</p>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell label">Automazione</div>
+                    <div class="comparison-cell">
+                        
+                        <p>Non puoi automatizzare un prompt</p>
+                    </div>
+                    <div class="comparison-cell highlight">
+                        
+                        <p>Script .ora in cron, CI/CD, produzione</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-examples">
+                <div class="why-example-card">
+                    <h3>× Con ChatGPT/Windsurf/Cursor</h3>
+                    <div class="why-steps">
+                        <div class="step">1. Apri VS Code con Copilot/Windsurf</div>
+                        <div class="step">2. Chat laterale: "Analizza vendite.csv"</div>
+                        <div class="step">3. AI genera codice Python nel file</div>
+                        <div class="step">4. Devi capire il codice generato</div>
+                        <div class="step">5. Installa dipendenze (pandas, matplotlib...)</div>
+                        <div class="step">6. python analysis.py</div>
+                        <div class="step">7. Errore: percorso file sbagliato</div>
+                        <div class="step">8. Modifica il codice Python manualmente</div>
+                        <div class="step">9. Errore: colonna non trovata</div>
+                        <div class="step">10. Debug del Python generato...</div>
+                    </div>
+                    <p class="time">Tempo: 10-15 minuti + devi sapere Python</p>
+                </div>
+
+                <div class="why-example-card highlight">
+                    <h3>✓ Con ORATIO</h3>
+                    <div class="why-steps">
+                        <div class="step">1. Crea analisi.ora</div>
+                        <div class="step">2. Scrivi: "Carica vendite.csv e calcola la media"</div>
+                        <div class="step">3. oratio run analisi.ora</div>
+                        <div class="step">4. Fatto. Nessun Python da capire.</div>
+                    </div>
+                    <p class="time">Tempo: 30 secondi + zero conoscenza Python</p>
+                </div>
+            </div>
+
+            <div class="why-quote">
+                <blockquote>
+                    "Windsurf, Cursor, Copilot generano <strong>Python</strong> che devi capire e debuggare.<br>
+                    ORATIO <strong>È</strong> il linguaggio. Non genera nulla, esegue direttamente.<br><br>
+                    La differenza? Con gli AI IDE devi ancora sapere programmare.<br>
+                    Con ORATIO, parli e basta."
+                </blockquote>
+                <cite>— La Vera Rivoluzione</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title">ORATIO vs Altri Tool</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3>Python</h3>
+                    <div class="comparison-code">
+                        <pre><code>import pandas as pd
+df = pd.read_csv('vendite.csv')
+filtered = df[df['importo'] > 1000]
+mean = filtered['importo'].mean()
+print(f"Media: {mean}")</code></pre>
+                    </div>
+                    <p class="comparison-label">× Complesso, sintassi rigida</p>
+                </div>
+                <div class="comparison-card highlight">
+                    <h3>ORATIO</h3>
+                    <div class="comparison-code">
+                        <pre><code>Carica vendite.csv.
+Filtra dove importo > 1000.
+Calcola la media.
+Stampa il risultato.</code></pre>
+                    </div>
+                    <p class="comparison-label">✓ Semplice, naturale, immediato</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">Guarda ORATIO in Azione</h2>
+            <div class="demo-container">
+                <div class="demo-video">
+                    <video controls width="100%">
+                        <source src="video_demo_oratio.mp4" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
+                </div>
+                <div class="demo-features">
+                    <h3>Cosa Puoi Fare Oggi</h3>
+                    <p class="demo-intro">Questo è solo l'inizio. ORATIO è in continua evoluzione.</p>
+                    <ul class="demo-list">
+                        <li>✓ Analisi dati con CSV, Excel, JSON</li>
+                        <li>✓ Statistiche e calcoli matematici</li>
+                        <li>✓ Visualizzazioni e grafici</li>
+                        <li>✓ Filtri e trasformazioni dati</li>
+                        <li>✓ Report automatici</li>
+                        <li>✓ Automazione workflow</li>
+                    </ul>
+                    <div class="demo-future">
+                        <p><strong>Prossimamente:</strong></p>
+                        <p>→ Database (SQL, MongoDB)<br>
+                        → API e Web scraping<br>
+                        → Machine Learning<br>
+                        → Controllo robot e IoT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2>Inizia Ora</h2>
+                <p>ORATIO è open source e gratuito. Inizia in 5 minuti.</p>
+                <div class="download-buttons">
+                    <a href="https://github.com/manuellazzaro/oratio" class="btn btn-large btn-primary">
+                        Download
+                    </a>
+                    <a href="#docs" class="btn btn-large btn-secondary">
+                        Documentazione
+                    </a>
+                </div>
+                <div class="install-command">
+                    <code>pip install oratio</code>
+                    <button class="copy-btn" onclick="copyInstall()">Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="logo_oratio.png" alt="ORATIO" class="logo-img">
+                    </div>
+                    <p>L'eloquenza del codice</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Prodotto</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                            <li><a href="#download">Download</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Risorse</h4>
+                        <ul>
+                            <li><a href="#docs">Documentazione</a></li>
+                            <li><a href="#examples">Esempi</a></li>
+                            <li><a href="#community">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="https://github.com/manuellazzaro/oratio">GitHub</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Discord</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ORATIO by Manuel Lazzaro. MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyInstall() {
+            navigator.clipboard.writeText('pip install oratio');
+            alert('Comando copiato!');
+        }
+
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
