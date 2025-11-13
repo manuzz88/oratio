@@ -588,9 +588,20 @@ body {
     margin-bottom: 3rem;
 }
 
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand .logo {
+    margin-bottom: 0.5rem;
+}
+
 .footer-brand p {
     color: var(--gray);
-    margin-top: 0.5rem;
+    margin: 0;
+    padding-left: 0;
 }
 
 .footer-links {
