@@ -1,0 +1,7 @@
+Carica vendite.csv.
+Calcola la somma della colonna importo.
+Calcola la media della colonna importo.
+Conta le righe.
+Stampa "Totale vendite: {somma} euro".
+Stampa "Media: {media} euro".
+Stampa "Numero ordini: {conteggio}".

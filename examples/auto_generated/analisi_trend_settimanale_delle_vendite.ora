@@ -1,0 +1,9 @@
+# Analisi Trend Settimanale delle Vendite\n# Questo script ORATIO analizza i dati di vendita settimanali da un file CSV, calcolando la media e il totale delle vendite per ogni settimana, e visualizza un grafico a barre del trend.\n\nCarica dati da 'vendite_settimanali.csv' usando read_csv
+Filtra i dati per 'anno' = 2023
+Raggruppa i dati per 'settimana'
+Calcola la media di 'vendite' per gruppo usando mean, denominala 'media_vendite'
+Calcola la somma di 'vendite' per gruppo usando sum, denominala 'somma_vendite'
+Conta il numero di vendite per gruppo usando count, denominalo 'numero_vendite'
+Ordina i risultati per 'settimana' usando sort
+Mostra il risultato con show
+Traccia un grafico a barre con 'settimana' sulle x e 'media_vendite' sulle y usando bar\n\n# Output atteso:\n# Un grafico a barre che mostra la media delle vendite per ogni settimana dell'anno 2023, accompagnato da una tabella con le settimane, la media delle vendite, il totale delle vendite e il numero delle vendite per settimana.

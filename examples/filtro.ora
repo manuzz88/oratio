@@ -1,0 +1,4 @@
+Carica il file vendite.csv.
+Filtra le righe dove importo è maggiore di 100.
+Conta quante righe ci sono.
+Stampa "Prodotti costosi: {conteggio}".

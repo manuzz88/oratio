@@ -1,0 +1,7 @@
+# Segmentazione clienti per età\n# Questo esempio dimostra come segmentare una lista di clienti in base alla loro età utilizzando il linguaggio di programmazione naturale italiano ORATIO.\n\n1. Leggi il file 'clienti.csv' usando read_csv e salva i dati in 'lista_clienti'.
+2. Filtra 'lista_clienti' per età, creando gruppi: 'under_30', '30_45', 'over_45'.
+3. Conta il numero di clienti in ciascun gruppo età usando count.
+4. Mostra il conteggio di ogni gruppo con show.
+5. Ordina i gruppi per numero decrescente di clienti usando sort.
+6. Crea un grafico a barre con bar per visualizzare la distribuzione dei clienti per fasce d'età.
+7. Stampa 'Completato' con print una volta finito.\n\n# Output atteso:\n# Una tabella mostrata con il conteggio dei clienti per ciascuna fascia d'età, seguita da un grafico a barre che rappresenta visivamente la distribuzione.

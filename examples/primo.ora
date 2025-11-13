@@ -1,0 +1,4 @@
+Carica il file vendite.csv.
+Mostra le prime 5 righe.
+Calcola la media della colonna importo.
+Stampa "La media è: {media}".

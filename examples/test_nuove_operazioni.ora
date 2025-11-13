@@ -1,0 +1,13 @@
+Carica vendite.csv.
+
+Mostra le prime 3 righe.
+Mostra le ultime 2 righe.
+
+Calcola il minimo della colonna importo.
+Calcola il massimo della colonna importo.
+Calcola la mediana della colonna importo.
+
+Mostra le dimensioni del dataset.
+Mostra i nomi delle colonne.
+
+Stampa "Test completato!"

@@ -1,0 +1,7 @@
+# Analisi delle vendite mensili con grafico a barre\n# Questo esempio illustra come leggere i dati di vendita da un file CSV, filtrare per un determinato anno, calcolare la somma delle vendite per ogni mese e visualizzare i risultati con un grafico a barre.\n\nleggi il file 'vendite_2022.csv' usando read_csv
+filtra i dati per 'anno' uguale a 2022 usando filter
+raggruppa i dati per 'mese' usando group
+per ogni gruppo, calcola la somma di 'importo_vendite' usando sum
+ordina i risultati per 'mese' usando sort
+usa plot con tipo 'bar' per mostrare 'mese' sulle ascisse e 'somma_importo_vendite' sulle ordinate
+mostra il grafico con show\n\n# Output atteso:\n# Un grafico a barre che mostra la somma delle vendite per ogni mese dell'anno 2022.

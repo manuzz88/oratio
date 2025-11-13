@@ -1,0 +1,8 @@
+# Dashboard Vendite Interattivo\n# Questo esempio mostra come creare una dashboard interattiva delle vendite utilizzando dati da un file CSV. L'obiettivo è filtrare, raggruppare per categoria, e visualizzare le vendite totali e la media per ciascuna categoria.\n\nleggi_csv('vendite.csv')
+filtra per 'anno' = 2023
+raggruppa per 'categoria'
+calcola somma di 'importo' e assegna a 'vendite_totali'
+calcola media di 'importo' e assegna a 'media_vendite'
+mostra 'categoria', 'vendite_totali', 'media_vendite'
+ordina per 'vendite_totali' in modo decrescente
+bar 'categoria' e 'vendite_totali' titolo 'Vendite per Categoria 2023'\n\n# Output atteso:\n# Una tabella mostrante categoria, vendite totali e media vendite ordinate per vendite totali in modo decrescente, seguita da un grafico a barre delle vendite per categoria per l'anno 2023.

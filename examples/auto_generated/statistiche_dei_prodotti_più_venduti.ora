@@ -1,0 +1,7 @@
+# Statistiche dei prodotti più venduti\n# Questo esempio mostra come utilizzare ORATIO per leggere i dati delle vendite da un file CSV, filtrare per un certo anno, raggruppare per prodotto, calcolare il totale venduto per ogni prodotto, e infine visualizzare i primi 5 prodotti più venduti in un grafico a barre.\n\nleggi_csv('vendite.csv')
+filtra per anno = 2022
+raggruppa per prodotto
+somma quantità venduta
+ordina decrescentemente per quantità venduta
+mostra prime 5 righe
+bar titolo 'Top 5 Prodotti Più Venduti nel 2022' asse_x 'Prodotto' asse_y 'Quantità Venduta'\n\n# Output atteso:\n# Un grafico a barre mostrante i top 5 prodotti più venduti nel 2022, con i prodotti sull'asse delle x e le quantità vendute sull'asse delle y.

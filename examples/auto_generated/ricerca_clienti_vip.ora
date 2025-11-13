@@ -1,0 +1,9 @@
+# Ricerca Clienti VIP\n# Questo esempio di codice ORATIO identifica i clienti che hanno speso più di 1000€, elencandoli in ordine di spesa decrescente.\n\n1. Leggi il file 'clienti.csv' usando read_csv e assegnalo alla variabile 'clienti'.
+2. Filtra 'clienti' per quelli con spesa maggiore di 1000€ usando filter e assegnalo a 'clienti_vip'.
+3. Ordina 'clienti_vip' in base alla spesa in modo decrescente usando sort.
+4. Mostra 'clienti_vip' usando show.
+
+# Commento: Il codice inizia con la lettura del file contenente i dati dei clienti.
+# Successivamente, filtra per trovare solo quelli che hanno speso più di 1000€.
+# Poi, ordina questi clienti VIP in base alla loro spesa totale in ordine decrescente.
+# Infine, visualizza la lista dei clienti VIP.\n\n# Output atteso:\n# Lista dei clienti VIP ordinata in base alla spesa, con i clienti che hanno speso più di 1000€ in cima.

@@ -1,0 +1,8 @@
+# Report giornaliero delle vendite\n# Questo codice ORATIO legge i dati giornalieri delle vendite da un file CSV, filtra le vendite del giorno attuale, calcola il totale delle vendite e il numero di vendite, e infine mostra un riassunto e un grafico a barre del totale delle vendite per ogni categoria di prodotto.\n\nIniziamo leggendo i dati dal file 'vendite_giornaliere.csv' con read_csv('vendite_giornaliere.csv')
+Filtra le righe che corrispondono alla data di oggi con filter('data', oggi())
+Ordina i risultati per categoria di prodotto con sort('categoria')
+Raggruppa i dati per categoria con group('categoria')
+Calcola il totale delle vendite per categoria con sum('importo')
+Conta il numero di vendite per categoria con count()
+Mostra il riassunto delle vendite di oggi con show()
+Crea un grafico a barre del totale delle vendite per categoria con bar('categoria', 'totale vendite')\n\n# Output atteso:\n# Un riassunto testuale delle vendite di oggi per categoria, seguito da un grafico a barre che mostra il totale delle vendite per ogni categoria.

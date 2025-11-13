@@ -1,0 +1,8 @@
+# Analisi delle vendite mensili e visualizzazione grafica\n# Questo esempio mostra come analizzare le vendite mensili da un file CSV, visualizzando la somma delle vendite per ogni mese e rappresentandole in un grafico a barre.\n\n1. Leggi il file 'vendite_mensili.csv' come vendite
+2. Filtra le vendite per l'anno corrente
+3. Raggruppa le vendite per mese
+4. Calcola la somma delle vendite per ogni gruppo
+5. Ordina i risultati per mese
+6. Mostra i risultati
+7. Disegna un grafico a barre con i mesi sull'asse X e la somma delle vendite sull'asse Y
+8. Visualizza il grafico\n\n# Output atteso:\n# Una tabella che mostra la somma delle vendite per ogni mese dell'anno corrente, seguita da un grafico a barre che rappresenta visivamente questi dati.

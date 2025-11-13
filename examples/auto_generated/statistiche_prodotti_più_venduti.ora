@@ -1,0 +1,8 @@
+# Statistiche Prodotti Più Venduti\n# Questo esempio illustra come utilizzare ORATIO per analizzare i dati di vendita dei prodotti, identificare i più venduti e calcolare le statistiche relative alle vendite.\n\n1. Leggi il file 'vendite.csv' come dati_vendite
+2. Filtra dati_vendite per 'anno' uguale a 2023
+3. Raggruppa il risultato per 'prodotto'
+4. Calcola la somma di 'quantità' per ogni gruppo
+5. Ordina i risultati in modo decrescente per 'quantità'
+6. Mostra i primi 5 risultati
+7. Crea un grafico a barre con i risultati per visualizzare i prodotti più venduti
+// Questo codice legge i dati di vendita, filtra per l'anno corrente, raggruppa per prodotto, calcola e ordina le quantità vendute, e infine visualizza i primi 5 prodotti più venduti con un grafico a barre.\n\n# Output atteso:\n# Un grafico a barre che mostra i primi 5 prodotti più venduti nel 2023, ordinati per quantità venduta.

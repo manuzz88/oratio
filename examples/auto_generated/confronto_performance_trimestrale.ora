@@ -1,0 +1,7 @@
+# Confronto Performance Trimestrale\n# Questo codice ORATIO confronta la performance trimestrale di vendite di un'azienda, utilizzando dati caricati da un file CSV. Calcola la media di vendite per trimestre e visualizza un grafico a barre per una facile interpretazione.\n\nCarica i dati dalle vendite tramite read_csv('vendite_trimestrali.csv').
+Filtra le vendite per anno utilizzando filter(anno, 2023).
+Raggruppa i dati per trimestre con group(trimestre).
+Calcola la media di vendite per ogni trimestre mediante mean(vendite).
+Ordina i risultati per trimestre con sort(trimestre).
+Visualizza il risultato con un grafico a barre tramite bar(trimestre, media_vendite).
+Mostra i risultati sullo schermo utilizzando show().\n\n# Output atteso:\n# Un grafico a barre che mostra la media delle vendite per ogni trimestre dell'anno 2023.
