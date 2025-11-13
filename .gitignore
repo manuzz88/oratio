@@ -1,0 +1,62 @@
+# Segreti aziendali e file sensibili
+PyPI-Recovery-Codes-*.txt
+*.key
+*.pem
+.env
+.env.local
+
+# Documentazione interna
+ARCHITETTURA.md
+MANIFESTO.md
+PROGRESS.md
+ORATIO_LAUNCH.md
+PYPI_SETUP.md
+DEPLOY_WEBSITE.md
+MARKETING_PLAN.md
+
+# Video e media pesanti
+video_demo/
+*.mp4
+*.mov
+
+# Snapshots e backup
+.snapshots/
+backup/
+
+# Development
+test_poc.py
+oratio-cli
+scripts/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
