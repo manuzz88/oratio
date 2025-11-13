@@ -49,6 +49,9 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+venv/
+env/
+ENV/
 
 # IDEs
 .vscode/
@@ -60,3 +63,19 @@ wheels/
 # OS
 .DS_Store
 Thumbs.db
+
+# Test files
+test_*.py
+\!tests/
+
+# Temporary files
+*.log
+*.csv
+output.png
+test_output.png
+
+# API temp
+api.log
+
+# PyPI recovery codes
+PyPI-Recovery-Codes-*.txt

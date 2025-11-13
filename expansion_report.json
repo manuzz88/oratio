@@ -1,0 +1,72 @@
+[
+  {
+    "name": "file_create",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 706,
+    "test_length": 2126
+  },
+  {
+    "name": "file_delete",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 952,
+    "test_length": 1725
+  },
+  {
+    "name": "file_copy",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 848,
+    "test_length": 3282
+  },
+  {
+    "name": "load_csv",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 992,
+    "test_length": 2686
+  },
+  {
+    "name": "save_csv",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 738,
+    "test_length": 2217
+  },
+  {
+    "name": "load_json",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 898,
+    "test_length": 1686
+  },
+  {
+    "name": "save_json",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 1032,
+    "test_length": 2089
+  },
+  {
+    "name": "http_get",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 1234,
+    "test_length": 2399
+  },
+  {
+    "name": "http_post",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 1187,
+    "test_length": 2025
+  },
+  {
+    "name": "loop",
+    "status": "success",
+    "filepath": "/home/manuel/CascadeProjects/oratio/oratio/operations/data.py",
+    "code_length": 1041,
+    "test_length": 1195
+  }
+]
