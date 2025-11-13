@@ -1,0 +1,136 @@
+/* AI-Powered Section Styles */
+.ai-powered {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.ai-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ai-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.ai-subtitle {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    opacity: 0.95;
+}
+
+.ai-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.ai-stat {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ai-stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.ai-stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.ai-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.ai-feature {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ai-feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.ai-feature p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.ai-operations {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ai-operations h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.operations-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.operation-tag {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ai-cta {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ai-cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ai-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ai-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ai-stat-number {
+        font-size: 2rem;
+    }
+}
