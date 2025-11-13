@@ -1,0 +1,8 @@
+# ORATIO - English Example
+# This demonstrates ORATIO understanding English!
+
+Load sales.csv.
+Show the first 5 rows.
+Filter where amount > 1000.
+Calculate the average.
+Print the result.
