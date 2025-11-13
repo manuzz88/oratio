@@ -270,23 +270,102 @@ Salva come output.png."></textarea>
                 
                 // Simula risposte basate sul codice
                 if (lowerCode.includes('puntino') || lowerCode.includes('punto')) {
-                    output.textContent = '✅ Esecuzione completata!\n\n🎨 Puntino rosso creato alle coordinate (100, 100)';
+                    output.textContent = `🔍 Parsing: Crea puntino rosso...
+✅ Parsed: 1 operazione
+
+⚡ Esecuzione 1 operazione...
+
+  ▶ graphics.draw_point...
+    🎨 Puntino rosso creato alle coordinate (100, 100)
+
+✅ Esecuzione completata`;
                 } else if (lowerCode.includes('cerchio') || lowerCode.includes('circle')) {
-                    output.textContent = '✅ Esecuzione completata!\n\n🎨 Cerchio blu creato con raggio 50px';
+                    output.textContent = `🔍 Parsing: Crea cerchio blu...
+✅ Parsed: 1 operazione
+
+⚡ Esecuzione 1 operazione...
+
+  ▶ graphics.draw_circle...
+    🎨 Cerchio blu creato con raggio 50px
+
+✅ Esecuzione completata`;
                 } else if (lowerCode.includes('quadrato') || lowerCode.includes('square')) {
-                    output.textContent = '✅ Esecuzione completata!\n\n🎨 Quadrato verde creato (50x50 pixel)';
-                } else if (lowerCode.includes('ciao') || lowerCode.includes('hello')) {
-                    output.textContent = '✅ Output:\nCiao dal Playground!';
+                    output.textContent = `🔍 Parsing: Crea quadrato verde...
+✅ Parsed: 1 operazione
+
+⚡ Esecuzione 1 operazione...
+
+  ▶ graphics.draw_square...
+    🎨 Quadrato verde creato (50x50 pixel)
+
+✅ Esecuzione completata`;
+                } else if (lowerCode.includes('stampa') || lowerCode.includes('ciao') || lowerCode.includes('hello')) {
+                    output.textContent = `🔍 Parsing: Stampa 'Ciao dal Playground!'...
+✅ Parsed: 1 operazione
+
+⚡ Esecuzione 1 operazione...
+
+  ▶ io.print...
+    📄 Ciao dal Playground!
+
+✅ Esecuzione completata`;
                 } else if (lowerCode.includes('csv') || lowerCode.includes('carica')) {
-                    output.textContent = '✅ Esecuzione completata!\n\n📊 File caricato: 1000 righe, 5 colonne\nColonne: nome, età, città, importo, data';
+                    output.textContent = `🔍 Parsing: Carica file CSV...
+✅ Parsed: 1 operazione
+
+⚡ Esecuzione 1 operazione...
+
+  ▶ data.load_csv...
+    📊 File caricato: 1000 righe, 5 colonne
+    📋 Colonne: nome, età, città, importo, data
+
+✅ Esecuzione completata`;
                 } else if (lowerCode.includes('filtra') || lowerCode.includes('filter')) {
-                    output.textContent = '✅ Esecuzione completata!\n\n📊 Filtro applicato: 234 righe corrispondono ai criteri';
+                    output.textContent = `🔍 Parsing: Filtra dati...
+✅ Parsed: 1 operazione
+
+⚡ Esecuzione 1 operazione...
+
+  ▶ data.filter...
+    📊 Filtro applicato: 234 righe corrispondono ai criteri
+
+✅ Esecuzione completata`;
                 } else if (lowerCode.includes('media') || lowerCode.includes('average')) {
-                    output.textContent = '✅ Esecuzione completata!\n\n📊 Media calcolata: 1,247.50';
+                    output.textContent = `🔍 Parsing: Calcola media...
+✅ Parsed: 1 operazione
+
+⚡ Esecuzione 1 operazione...
+
+  ▶ math.average...
+    📊 Media calcolata: 1,247.50
+
+✅ Esecuzione completata`;
                 } else if (lowerCode.includes('grafico') || lowerCode.includes('chart')) {
-                    output.textContent = '✅ Esecuzione completata!\n\n📊 Grafico creato con successo!';
+                    output.textContent = `🔍 Parsing: Crea grafico...
+✅ Parsed: 1 operazione
+
+⚡ Esecuzione 1 operazione...
+
+  ▶ graphics.create_chart...
+    📊 Grafico a barre creato con successo!
+
+✅ Esecuzione completata`;
                 } else {
-                    output.textContent = '✅ Esecuzione completata!\n\nℹ️ Questo è un playground demo.\nPer esecuzione completa, installa ORATIO:\n\npip install oratio\n\nPoi esegui: oratio run file.ora';
+                    output.textContent = `🔍 Parsing: ${code.split('\n')[0]}...
+✅ Parsed: 1 operazione
+
+⚡ Esecuzione 1 operazione...
+
+  ▶ Operazione eseguita
+
+ℹ️ Questo è un playground demo.
+Per esecuzione completa, installa ORATIO:
+
+pip install oratio
+
+Poi esegui: oratio run file.ora
+
+✅ Esecuzione completata`;
                 }
             } catch (error) {
                 output.textContent = '❌ Errore:\n' + error.message;
