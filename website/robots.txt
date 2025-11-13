@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manuzz88.github.io/oratio/sitemap.xml
