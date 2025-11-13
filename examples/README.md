@@ -1,123 +1,93 @@
-# 📚 Esempi Lingua
+# 📚 Esempi ORATIO
 
-Questa cartella contiene esempi di programmi scritti in Lingua.
+Esempi che dimostrano la potenza del linguaggio naturale\!
 
-## 🚀 Come Eseguire
+## 🚀 Quick Start
 
 ```bash
-# Dalla root del progetto
-./lingua-cli run examples/nome.lingua
-
-# Con output verbose
-./lingua-cli run examples/nome.lingua -v
-
-# Mostra IR generato
-./lingua-cli run examples/nome.lingua --show-ir
+pip install oratio
+oratio examples/primo.ora
 ```
 
-## 📝 Esempi Disponibili
+## 📝 Esempi Base
 
-### 1. primo.lingua
-**Livello:** Principiante  
-**Operazioni:** Carica CSV, mostra dati, calcola media
-
+### Hello World
+```ora
+# primo.ora
+Stampa "Ciao Mondo\!"
 ```
-Carica il file vendite.csv.
+
+### Analisi Dati
+```ora
+# analisi.ora
+Carica vendite.csv.
 Mostra le prime 5 righe.
 Calcola la media della colonna importo.
 Stampa il risultato.
 ```
 
-### 2. filtro.lingua
-**Livello:** Principiante  
-**Operazioni:** Carica, filtra, conta
+## 🎨 Esempi Grafici (NUOVO\!)
 
-```
-Carica il file vendite.csv.
-Filtra le righe dove importo è maggiore di 100.
-Conta quante righe ci sono.
-Stampa "Prodotti costosi: {conteggio}".
+### Puntino Rosso
+```ora
+# puntino_rosso.ora
+Crea un puntino rosso.
+Salva come puntino.png.
 ```
 
-### 3. statistiche.lingua
-**Livello:** Intermedio  
-**Operazioni:** Somma, media, conteggio
-
-```
-Carica vendite.csv.
-Calcola la somma della colonna importo.
-Calcola la media della colonna importo.
-Conta le righe.
-Stampa statistiche.
+### Cerchio Blu
+```ora
+Crea un cerchio blu con raggio 80.
+Salva come cerchio.png.
 ```
 
-### 4. grafico.lingua
-**Livello:** Intermedio  
-**Operazioni:** Visualizzazione dati
-
-```
-Carica vendite.csv.
-Crea un grafico a barre della colonna importo.
-Salva il grafico come "vendite_grafico.png".
-```
-
-### 5. completo.lingua
-**Livello:** Avanzato  
-**Operazioni:** Pipeline completa di analisi
-
-```
-Carica, filtra, calcola statistiche, ordina, salva.
-Esempio completo di workflow di analisi dati.
+### Disegno Complesso
+```ora
+Crea una tela 500x500.
+Disegna un punto rosso in posizione 100, 100.
+Disegna un cerchio blu in posizione 250, 250.
+Disegna una linea verde da 50,50 a 450,450.
+Salva come disegno.png.
 ```
 
-## 📊 Dati di Test
+## 🌍 Multilingua
 
-### vendite.csv
-File CSV con dati di vendita:
-- data: Data della vendita
-- prodotto: Nome prodotto
-- importo: Prezzo in euro
-- quantita: Quantità venduta
+**Italiano:**
+```ora
+Carica dati.csv e calcola la media.
+```
 
-10 righe di esempio con vari prodotti e prezzi.
+**English:**
+```ora
+Load data.csv and calculate the average.
+```
 
-## 🎯 Operazioni Supportate
+## 🎯 Operazioni Disponibili
 
 ### I/O
-- `Carica file.csv` → io.read_csv
-- `Salva in file.csv` → io.write_csv
-- `Stampa "testo"` → io.print
+- Carica file CSV
+- Salva file CSV
+- Stampa risultati
 
-### Data Manipulation
-- `Mostra le prime N righe` → data.show
-- `Filtra dove colonna > valore` → data.filter
-- `Ordina per colonna` → data.sort
-- `Raggruppa per colonna` → data.group
+### Dati
+- Mostra/Filtra/Ordina
+- Prime/Ultime righe
+- Statistiche
 
 ### Math
-- `Calcola la media` → math.mean
-- `Calcola la somma` → math.sum
-- `Conta le righe` → math.count
+- Media, Somma, Conteggio
+- Min, Max, Mediana
 
-### Visualizzazione
-- `Crea grafico` → viz.plot
-- `Crea grafico a barre` → viz.bar
+### 🎨 Grafica
+- Crea punto/cerchio/linea
+- Imposta colori
+- Salva immagini
 
-## 💡 Tips
+## 💡 Prova Tu\!
 
-1. **Path relativi**: I file sono cercati relativamente alla cartella dell'esempio
-2. **Variabili implicite**: Non serve dichiarare variabili, il sistema le gestisce
-3. **Sintassi flessibile**: Puoi scrivere in modi diversi, l'AI capisce l'intent
-4. **Errori tollerati**: Piccoli errori di battitura vengono corretti automaticamente
+ORATIO capisce il linguaggio naturale:
+- "Crea 3 punti rossi"
+- "Disegna un triangolo giallo"
+- "Analizza vendite e crea grafico"
 
-## 🚀 Prossimi Esempi
-
-- [ ] Loop e condizioni
-- [ ] Funzioni personalizzate
-- [ ] API integration
-- [ ] Machine learning base
-- [ ] Dashboard interattivo
-
----
-
-**Crea i tuoi esempi e condividili!** 🌟
+**Contribuisci con i tuoi esempi\!** 🚀
