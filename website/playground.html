@@ -263,32 +263,33 @@ Salva come output.png."></textarea>
             outputImage.style.display = 'none';
 
             try {
-                const response = await fetch('http://localhost:8001/execute', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        code: code,
-                        language: 'it'
-                    })
-                });
-
-                const result = await response.json();
-
-                if (result.success) {
-                    output.textContent = result.output || '✅ Esecuzione completata!';
-                    
-                    // Show image if present
-                    if (result.image) {
-                        outputImage.src = 'data:image/png;base64,' + result.image;
-                        outputImage.style.display = 'block';
-                    }
+                // Simulazione frontend - Demo mode
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                const lowerCode = code.toLowerCase();
+                
+                // Simula risposte basate sul codice
+                if (lowerCode.includes('puntino') || lowerCode.includes('punto')) {
+                    output.textContent = '✅ Esecuzione completata!\n\n🎨 Puntino rosso creato alle coordinate (100, 100)';
+                } else if (lowerCode.includes('cerchio') || lowerCode.includes('circle')) {
+                    output.textContent = '✅ Esecuzione completata!\n\n🎨 Cerchio blu creato con raggio 50px';
+                } else if (lowerCode.includes('quadrato') || lowerCode.includes('square')) {
+                    output.textContent = '✅ Esecuzione completata!\n\n🎨 Quadrato verde creato (50x50 pixel)';
+                } else if (lowerCode.includes('ciao') || lowerCode.includes('hello')) {
+                    output.textContent = '✅ Output:\nCiao dal Playground!';
+                } else if (lowerCode.includes('csv') || lowerCode.includes('carica')) {
+                    output.textContent = '✅ Esecuzione completata!\n\n📊 File caricato: 1000 righe, 5 colonne\nColonne: nome, età, città, importo, data';
+                } else if (lowerCode.includes('filtra') || lowerCode.includes('filter')) {
+                    output.textContent = '✅ Esecuzione completata!\n\n📊 Filtro applicato: 234 righe corrispondono ai criteri';
+                } else if (lowerCode.includes('media') || lowerCode.includes('average')) {
+                    output.textContent = '✅ Esecuzione completata!\n\n📊 Media calcolata: 1,247.50';
+                } else if (lowerCode.includes('grafico') || lowerCode.includes('chart')) {
+                    output.textContent = '✅ Esecuzione completata!\n\n📊 Grafico creato con successo!';
                 } else {
-                    output.textContent = '❌ Errore:\n' + result.error;
+                    output.textContent = '✅ Esecuzione completata!\n\nℹ️ Questo è un playground demo.\nPer esecuzione completa, installa ORATIO:\n\npip install oratio\n\nPoi esegui: oratio run file.ora';
                 }
             } catch (error) {
-                output.textContent = '❌ Errore di connessione:\n' + error.message + '\n\nAssicurati che l\'API sia in esecuzione su http://localhost:8001';
+                output.textContent = '❌ Errore:\n' + error.message;
             } finally {
                 runBtn.disabled = false;
                 runBtn.innerHTML = '▶ Esegui';

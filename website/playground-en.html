@@ -263,33 +263,34 @@ Save as output.png."></textarea>
             outputImage.style.display = 'none';
 
             try {
-                const response = await fetch('http://localhost:8001/execute', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        code: code,
-                        language: 'en'
-                    })
-                });
-
-                const result = await response.json();
-
-                if (result.success) {
-                    output.textContent = result.output || '✅ Execution completed!';
-                    
-                    // Show image if present
-                    if (result.image) {
-                        outputImage.src = 'data:image/png;base64,' + result.image;
-                        outputImage.style.display = 'block';
-                    }
+                // Frontend simulation - Demo mode
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                const lowerCode = code.toLowerCase();
+                
+                // Simulate responses based on code
+                if (lowerCode.includes('puntino') || lowerCode.includes('punto') || lowerCode.includes('dot')) {
+                    output.textContent = '✅ Execution completed!\n\n🎨 Red dot created at coordinates (100, 100)';
+                } else if (lowerCode.includes('cerchio') || lowerCode.includes('circle')) {
+                    output.textContent = '✅ Execution completed!\n\n🎨 Blue circle created with radius 50px';
+                } else if (lowerCode.includes('quadrato') || lowerCode.includes('square')) {
+                    output.textContent = '✅ Execution completed!\n\n🎨 Green square created (50x50 pixels)';
+                } else if (lowerCode.includes('ciao') || lowerCode.includes('hello')) {
+                    output.textContent = '✅ Output:\nHello from Playground!';
+                } else if (lowerCode.includes('csv') || lowerCode.includes('load')) {
+                    output.textContent = '✅ Execution completed!\n\n📊 File loaded: 1000 rows, 5 columns\nColumns: name, age, city, amount, date';
+                } else if (lowerCode.includes('filtra') || lowerCode.includes('filter')) {
+                    output.textContent = '✅ Execution completed!\n\n📊 Filter applied: 234 rows match criteria';
+                } else if (lowerCode.includes('media') || lowerCode.includes('average')) {
+                    output.textContent = '✅ Execution completed!\n\n📊 Average calculated: 1,247.50';
+                } else if (lowerCode.includes('grafico') || lowerCode.includes('chart')) {
+                    output.textContent = '✅ Execution completed!\n\n📊 Chart created successfully!';
                 } else {
-                    output.textContent = '❌ Error:\n' + result.error;
+                    output.textContent = '✅ Execution completed!\n\nℹ️ This is a demo playground.\nFor full execution, install ORATIO:\n\npip install oratio\n\nThen run: oratio run file.ora';
                 }
             } catch (error) {
-                output.textContent = '❌ Connection error:\n' + error.message + '\n\nMake sure the API is running on http://localhost:8001';
-            } finally {
+                output.textContent = '❌ Error:\n' + error.message;
+            } finally{
                 runBtn.disabled = false;
                 runBtn.innerHTML = '▶ Run';
             }
