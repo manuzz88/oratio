@@ -1,799 +1,255 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORATIO - Il Primo Linguaggio di Programmazione in Italiano Naturale</title>
-    <meta name="description" content="ORATIO è il primo linguaggio di programmazione che capisce l'italiano. Programma parlando la tua lingua. Open source, gratuito, rivoluzionario. Made in Italy.">
-    <meta name="keywords" content="programmazione italiano, linguaggio naturale, ORATIO, coding italiano, NLP, AI programming, linguaggio programmazione naturale, programmare in italiano">
-    <meta name="author" content="Manuel Lazzaro">
-    <link rel="canonical" href="https://manuzz88.github.io/oratio/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://manuzz88.github.io/oratio/">
-    <meta property="og:title" content="ORATIO - Il Primo Linguaggio di Programmazione in Italiano">
-    <meta property="og:description" content="Programma parlando italiano. Il primo vero linguaggio di programmazione naturale. Open source e gratuito.">
-    <meta property="og:image" content="https://manuzz88.github.io/oratio/logo_oratio.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://manuzz88.github.io/oratio/">
-    <meta property="twitter:title" content="ORATIO - Programma in Italiano Naturale">
-    <meta property="twitter:description" content="Il primo linguaggio di programmazione che capisce l'italiano. Open source, gratuito, rivoluzionario.">
-    <meta property="twitter:image" content="https://manuzz88.github.io/oratio/logo_oratio.png">
-    
-    <link rel="icon" type="image/png" href="favicon_oratio.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="ai-section.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oratio — il coordinatore digitale che impara a ragionare come te</title>
+<meta name="description" content="Oratio ascolta i clienti, apre le riparazioni, organizza i tecnici e legge i fogli di lavoro dalle foto. E ogni giorno impara il tuo modo di mandare avanti l'azienda.">
+<link rel="canonical" href="https://oratio.dev/">
+<meta name="theme-color" content="#0f1519">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oratio.dev/">
+<meta property="og:title" content="Oratio — il coordinatore digitale">
+<meta property="og:description" content="Impara a ragionare come te. Poi coordina la tua squadra. Per le aziende di assistenza tecnica.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='7' fill='%230f1519' stroke='%23f0a24b' stroke-width='2'/%3E%3Crect x='9' y='9' width='14' height='14' rx='3' fill='%235fb6c6'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0f1519; --bg2:#151e23; --panel:#182228; --line:#26343b;
+    --ink:#eef3f3; --ink-soft:#9fb2b6; --ink-faint:#67797e;
+    --ember:#f0a24b; --ember-deep:#e2863a; --steel:#5fb6c6;
+    --grid:rgba(95,182,198,.06);
+    --display:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+    --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --serif:Georgia,"Times New Roman",serif;
+    --maxw:1120px;
+  }
+  @media (prefers-color-scheme:light){
+    :root{--bg:#e9edee;--bg2:#f4f6f6;--panel:#fff;--line:#d2dbdd;--ink:#131a1d;
+      --ink-soft:#4b585d;--ink-faint:#7d8a8f;--ember:#c15e14;--ember-deep:#a94f0e;--steel:#1f7284;--grid:rgba(31,114,132,.06);}
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+  ::selection{background:var(--ember);color:#1a1206;}
+  :focus-visible{outline:2px solid var(--ember);outline-offset:3px;border-radius:4px;}
+
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);display:inline-flex;align-items:center;gap:9px;}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--ember);animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(240,162,75,.5);}70%{box-shadow:0 0 0 8px rgba(240,162,75,0);}100%{box-shadow:0 0 0 0 rgba(240,162,75,0);}}
+
+  header.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:800;letter-spacing:-.01em;font-size:19px;}
+  .brand .mark{width:26px;height:26px;border:1.5px solid var(--ember);border-radius:7px;position:relative;flex:0 0 auto;}
+  .brand .mark::before{content:"";position:absolute;inset:5px;border-radius:2px;background:conic-gradient(from 220deg,var(--ember),var(--steel),var(--ember));opacity:.85;}
+  .brand small{font-family:var(--mono);font-weight:400;font-size:12px;color:var(--ink-faint);letter-spacing:.04em;}
+  .nav{display:flex;align-items:center;gap:22px;}
+  .nav a.link{font-size:14px;text-decoration:none;color:var(--ink-soft);}
+  .nav a.link:hover{color:var(--ink);}
+  .cta-mini{font-family:var(--body);font-weight:600;font-size:14px;text-decoration:none;color:#1a1206;background:var(--ember);padding:9px 16px;border-radius:8px;transition:background .15s;}
+  .cta-mini:hover{background:var(--ember-deep);}
+  @media (max-width:720px){.nav a.link{display:none;}}
+
+  .hero{position:relative;padding:86px 0 74px;border-bottom:1px solid var(--line);overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;
+    background:radial-gradient(60% 55% at 78% 6%,color-mix(in srgb,var(--ember) 15%,transparent),transparent 70%),
+      linear-gradient(transparent 31px,var(--grid) 32px),linear-gradient(90deg,transparent 31px,var(--grid) 32px);
+    background-size:auto,32px 32px,32px 32px;mask-image:linear-gradient(180deg,#000 58%,transparent);}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.12fr .88fr;gap:52px;align-items:center;}
+  h1{font-family:var(--display);font-weight:800;letter-spacing:-.028em;line-height:1.02;font-size:clamp(38px,6vw,64px);margin:18px 0 0;text-wrap:balance;}
+  h1 .em{color:var(--ember);}
+  .lede{font-size:clamp(16px,1.6vw,19px);color:var(--ink-soft);max-width:34em;margin:22px 0 0;}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;}
+  .btn{font-family:var(--body);font-weight:600;font-size:15px;text-decoration:none;padding:13px 22px;border-radius:10px;transition:transform .12s,background .15s,border-color .15s,color .15s;display:inline-block;}
+  .btn.primary{background:var(--ember);color:#1a1206;}
+  .btn.primary:hover{background:var(--ember-deep);transform:translateY(-1px);}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink);}
+  .btn.ghost:hover{border-color:var(--steel);color:var(--steel);}
+  .origin{margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);display:flex;align-items:center;gap:8px;}
+  .origin::before{content:"";width:16px;height:1px;background:var(--ember);}
+
+  .board{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 24px 60px -30px rgba(0,0,0,.6);}
+  .board .bhead{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
+  .board .bhead .live{display:inline-flex;align-items:center;gap:7px;color:var(--steel);}
+  .board .bhead .live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--steel);animation:blink 1.6s infinite;}
+  @keyframes blink{50%{opacity:.25;}}
+  .order{padding:14px 16px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline;}
+  .order:last-child{border-bottom:none;}
+  .order .cli{font-weight:600;font-size:15px;}
+  .order .pb{grid-column:1;color:var(--ink-soft);font-size:13.5px;}
+  .order .sq{grid-column:2;grid-row:1;font-family:var(--mono);font-size:11.5px;color:var(--ember);border:1px solid color-mix(in srgb,var(--ember) 40%,var(--line));padding:3px 8px;border-radius:20px;white-space:nowrap;}
+  .order .meta{grid-column:2;grid-row:2;font-family:var(--mono);font-size:12px;color:var(--steel);font-variant-numeric:tabular-nums;text-align:right;}
+
+  section{padding:76px 0;border-bottom:1px solid var(--line);}
+  .sec-eyebrow{margin-bottom:16px;}
+  h2{font-family:var(--display);font-weight:800;letter-spacing:-.022em;line-height:1.06;font-size:clamp(27px,3.6vw,40px);margin:0;text-wrap:balance;max-width:19em;}
+  .sec-lede{color:var(--ink-soft);font-size:17px;max-width:40em;margin:16px 0 0;}
+
+  .quote{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,31px);line-height:1.4;color:var(--ink);max-width:20em;margin:8px 0 0;text-wrap:balance;}
+  .quote .em{color:var(--ember);font-style:normal;}
+  .attr{font-family:var(--mono);font-size:13px;color:var(--ink-faint);margin-top:22px;letter-spacing:.03em;}
+
+  .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;}
+  .cap{background:var(--bg2);border:1px solid var(--line);border-radius:13px;padding:22px;transition:border-color .18s,transform .18s;}
+  .cap:hover{border-color:color-mix(in srgb,var(--ember) 50%,var(--line));transform:translateY(-3px);}
+  .cap .tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember);}
+  .cap h3{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.01em;margin:12px 0 8px;}
+  .cap p{margin:0;color:var(--ink-soft);font-size:14.5px;}
+
+  .loop{display:grid;grid-template-columns:repeat(3,1fr);margin-top:44px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);}
+  .step{padding:28px 24px;border-right:1px solid var(--line);position:relative;}
+  .step:last-child{border-right:none;}
+  .step .n{font-family:var(--mono);font-size:12px;color:var(--steel);letter-spacing:.1em;}
+  .step h3{font-family:var(--display);font-weight:800;font-size:20px;margin:14px 0 9px;letter-spacing:-.01em;}
+  .step p{margin:0;color:var(--ink-soft);font-size:14.5px;}
+  .step .arrow{position:absolute;right:-9px;top:50%;transform:translateY(-50%);z-index:2;width:18px;height:18px;border-radius:50%;background:var(--ember);color:#1a1206;display:grid;place-items:center;font-size:11px;font-weight:800;}
+  .step:last-child .arrow{display:none;}
+
+  .forwho{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;}
+  .chip{font-family:var(--mono);font-size:13px;color:var(--ink-soft);border:1px solid var(--line);background:var(--bg2);border-radius:22px;padding:8px 15px;}
+  .chip b{color:var(--ember);font-weight:700;}
+
+  .start{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;}
+  .scard{background:var(--bg2);border:1px solid var(--line);border-radius:13px;padding:24px;}
+  .scard .num{font-family:var(--display);font-weight:800;font-size:15px;color:#1a1206;background:var(--ember);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;}
+  .scard h3{font-family:var(--display);font-weight:800;font-size:18px;margin:16px 0 8px;}
+  .scard p{margin:0;color:var(--ink-soft);font-size:14.5px;}
+
+  .cta{background:linear-gradient(180deg,var(--bg2),var(--bg));text-align:center;}
+  .cta h2{margin:0 auto;}
+  .cta .sec-lede{margin-inline:auto;}
+  .cta .actions{justify-content:center;}
+  .cta .mailnote{font-family:var(--mono);font-size:13px;color:var(--ink-faint);margin-top:20px;}
+
+  footer{padding:38px 0;color:var(--ink-faint);font-family:var(--mono);font-size:12.5px;}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:14px 26px;justify-content:space-between;align-items:center;}
+  footer a{text-decoration:none;}footer a:hover{color:var(--ink);}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;gap:36px;}
+    .caps,.loop,.start{grid-template-columns:1fr;}
+    .step{border-right:none;border-bottom:1px solid var(--line);}.step:last-child{border-bottom:none;}.step .arrow{display:none;}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto;}}
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="logo">
-                <img src="logo_oratio.png" alt="ORATIO" class="logo-img">
-            </div>
-            
-            <!-- Hamburger Button -->
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <!-- Nav Menu -->
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#demo">Demo</a></li>
-                <li><a href="playground.html">🎮 Playground</a></li>
-                <li class="lang-selector">
-                    <button class="lang-btn active" aria-label="Italiano">🇮🇹 IT</button>
-                    <button class="lang-btn" onclick="window.location='index-en.html'" aria-label="English">🇬🇧 EN</button>
-                </li>
-                <li><a href="https://github.com/manuzz88/oratio" class="btn-primary" target="_blank"><svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 5px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    LA FINE DELLA<br>
-                    PROGRAMMAZIONE<br>
-                    <span class="gradient-text">COME LA CONOSCIAMO</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Per 70 anni hai dovuto imparare Python, Java, C++.<br>
-                    <strong>Oggi parli la tua lingua. Domani tutti programmano.</strong>
-                </p>
-                <div class="hero-impact">
-                    <div class="impact-item">
-                        <span class="impact-before">4 anni</span>
-                        <span class="impact-arrow">→</span>
-                        <span class="impact-after">5 minuti</span>
-                    </div>
-                    <div class="impact-item">
-                        <span class="impact-before">Solo ingegneri</span>
-                        <span class="impact-arrow">→</span>
-                        <span class="impact-after">Chiunque</span>
-                    </div>
-                    <div class="impact-item">
-                        <span class="impact-before">Sintassi artificiale</span>
-                        <span class="impact-arrow">→</span>
-                        <span class="impact-after">Lingua naturale</span>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#download" class="btn btn-large btn-primary btn-glow">
-                        Unisciti alla Rivoluzione
-                    </a>
-                    <a href="#demo" class="btn btn-large btn-secondary">
-                        Vedi in Azione
-                    </a>
-                </div>
-                <div class="hero-social-proof">
-                    <p>Primo vero linguaggio naturale • Made in Italy • Open Source</p>
-                </div>
-            </div>
-            <div class="hero-code">
-                <div class="code-window">
-                    <div class="code-header">
-                        <span class="code-dot"></span>
-                        <span class="code-dot"></span>
-                        <span class="code-dot"></span>
-                        <span class="code-title">analisi.ora</span>
-                    </div>
-                    <div class="code-content">
-                        <pre><code><span class="comment"># Questo è codice ORATIO</span>
-<span class="keyword">Carica</span> vendite.csv.
-<span class="keyword">Filtra</span> le righe dove importo > 1000.
-<span class="keyword">Calcola</span> la media.
-<span class="keyword">Crea</span> un grafico a barre.
-<span class="keyword">Stampa</span> "Analisi completata!"</code></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="mark"></span>Oratio&nbsp;<small>oratio.dev</small></div>
+  <nav class="nav">
+    <a class="link" href="#come">Come funziona</a>
+    <a class="link" href="#impara">La differenza</a>
+    <a class="link" href="#perchi">Per chi</a>
+    <a class="cta-mini" href="#demo">Richiedi una demo</a>
+  </nav>
+</div></header>
 
-    <!-- Revolution Section -->
-    <section class="revolution">
-        <div class="container">
-            <div class="revolution-header">
-                <span class="revolution-badge">LA STORIA CHE STIAMO SCRIVENDO</span>
-                <h2 class="section-title">Ogni 30 Anni, Una Rivoluzione</h2>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">1965</div>
-                    <div class="timeline-content">
-                        <h3>BASIC</h3>
-                        <p>"Programmazione per tutti"</p>
-                        <span class="timeline-impact">10M programmatori</span>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">1991</div>
-                    <div class="timeline-content">
-                        <h3>Python</h3>
-                        <p>"Semplice da leggere"</p>
-                        <span class="timeline-impact">100M programmatori</span>
-                    </div>
-                </div>
-                <div class="timeline-item active">
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-content">
-                        <h3>ORATIO</h3>
-                        <p>"Non serve più leggere codice"</p>
-                        <span class="timeline-impact">7B persone possono programmare</span>
-                    </div>
-                </div>
-            </div>
+<section class="hero"><div class="wrap">
+  <div class="hero-copy">
+    <span class="eyebrow"><span class="dot"></span>Il coordinatore digitale</span>
+    <h1>Impara a ragionare come te.<br><span class="em">Poi coordina la tua squadra.</span></h1>
+    <p class="lede">Oratio ascolta i clienti, apre le riparazioni, organizza i tecnici per zona e legge i fogli di lavoro dalle foto. Ma soprattutto guarda come decidi <em>tu</em>, ti fa domande, e ogni giorno impara il tuo modo di mandare avanti l'azienda.</p>
+    <div class="actions">
+      <a class="btn primary" href="#demo">Portalo nella tua azienda</a>
+      <a class="btn ghost" href="#come">Guarda come funziona</a>
+    </div>
+    <div class="origin">Nato dentro un'azienda di refrigerazione vera — non in un laboratorio.</div>
+  </div>
 
-            <div class="revolution-stats">
-                <div class="revolution-stat">
-                    <div class="revolution-stat-number">7 Miliardi</div>
-                    <div class="revolution-stat-label">Persone escluse dalla programmazione</div>
-                    <div class="revolution-stat-action">ORATIO le include TUTTE</div>
-                </div>
-                <div class="revolution-stat">
-                    <div class="revolution-stat-number">99%</div>
-                    <div class="revolution-stat-label">Del tempo speso a imparare sintassi</div>
-                    <div class="revolution-stat-action">ORATIO lo elimina</div>
-                </div>
-                <div class="revolution-stat">
-                    <div class="revolution-stat-number">$1 Trilione</div>
-                    <div class="revolution-stat-label">Mercato della programmazione</div>
-                    <div class="revolution-stat-action">ORATIO lo democratizza</div>
-                </div>
-            </div>
+  <div class="board" aria-hidden="true">
+    <div class="bhead"><span>Lavagna riparazioni</span><span class="live">in tempo reale</span></div>
+    <div class="order">
+      <span class="cli">Ristorante — cella frigo</span><span class="sq">GOMAA + VASILE</span>
+      <span class="pb">non raffredda · 18&nbsp;°C sul display</span><span class="meta">24 min · urgente</span>
+    </div>
+    <div class="order">
+      <span class="cli">Bar — banco refrigerato</span><span class="sq">ADRIAN + GIULIO</span>
+      <span class="pb">salta la corrente sotto carico</span><span class="meta">sabato · turno</span>
+    </div>
+    <div class="order">
+      <span class="cli">Sushi — fabbricatore ghiaccio</span><span class="sq">in programma</span>
+      <span class="pb">non produce ghiaccio</span><span class="meta">già gestito</span>
+    </div>
+  </div>
+</div></section>
 
-            <div class="revolution-quote">
-                <blockquote>
-                    "Il futuro della programmazione non si scrive. Si parla.<br>
-                    E oggi, per la prima volta nella storia, si parla nella tua lingua."
-                </blockquote>
-                <cite>— Manuel Lazzaro, Creatore di ORATIO</cite>
-            </div>
-        </div>
-    </section>
+<section id="problema"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">Il problema che conosci</span>
+  <p class="quote">"Se mi fermo io, si ferma tutto. Sono <span class="em">l'unico</span> che sa chi mandare dove, chi ha pagato, cosa manca."</p>
+  <p class="attr">— ogni titolare di un'azienda di assistenza, ogni mattina</p>
+  <p class="sec-lede">Il coordinamento vive nella tua testa e nei gruppi WhatsApp: richieste che si perdono, fogli di lavoro che non tornano, squadre da incastrare per zona, clienti da richiamare. Nessun gestionale l'ha mai risolto davvero, perché nessuno parla la tua lingua né lavora dove lavori tu.</p>
+</div></section>
 
-    <!-- Italian First Section -->
-    <section class="italian-first">
-        <div class="container">
-            <div class="italian-first-content">
-                <div class="italian-first-flag">Italia</div>
-                <h2 class="section-title">Italian First, Global Second</h2>
-                <p class="italian-first-subtitle">
-                    ORATIO nasce in italiano per una ragione precisa
-                </p>
-                
-                <div class="italian-first-grid">
-                    <div class="italian-first-card">
-                        <h3>Perché Italiano Prima?</h3>
-                        <ul>
-                            <li><strong>Zero competizione</strong> - Nessun altro linguaggio naturale</li>
-                            <li><strong>Validazione rapida</strong> - Testiamo tutto perfettamente</li>
-                            <li><strong>Community locale</strong> - Feedback immediato e diretto</li>
-                            <li><strong>Orgoglio italiano</strong> - Primo vero linguaggio naturale</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="italian-first-card highlight">
-                        <h3>Universale Roadmap Globale</h3>
-                        <div class="roadmap-timeline">
-                            <div class="roadmap-step active">
-                                <span class="roadmap-date">Ora</span>
-                                <span class="roadmap-lang">Italia Italiano</span>
-                                <span class="roadmap-status">✓ Live</span>
-                            </div>
-                            <div class="roadmap-step">
-                                <span class="roadmap-date">Q1 2026</span>
-                                <span class="roadmap-lang">🇬🇧 English</span>
-                                <span class="roadmap-status">Coming</span>
-                            </div>
-                            <div class="roadmap-step">
-                                <span class="roadmap-date">Q2 2026</span>
-                                <span class="roadmap-lang">🇪🇸 Español</span>
-                                <span class="roadmap-status">Planned</span>
-                            </div>
-                            <div class="roadmap-step">
-                                <span class="roadmap-date">Q3 2026</span>
-                                <span class="roadmap-lang">🇫🇷 Français</span>
-                                <span class="roadmap-status">Planned</span>
-                            </div>
-                            <div class="roadmap-step">
-                                <span class="roadmap-date">2027</span>
-                                <span class="roadmap-lang">Universale 10+ Lingue</span>
-                                <span class="roadmap-status">Vision</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="italian-first-quote">
-                    <p>
-                        "Iniziamo in italiano per perfezionare tutto. Una volta che funziona perfettamente in una lingua,
-                        espandere a inglese, spagnolo, francese e oltre sarà questione di settimane, non anni."
-                    </p>
-                    <cite>— La Strategia ORATIO</cite>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="come"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">Cosa fa, ogni giorno</span>
+  <h2>Vive dentro WhatsApp, dove già lavori. E fa il lavoro noioso al posto tuo.</h2>
+  <div class="caps">
+    <div class="cap"><div class="tag">Clienti</div><h3>Risponde e raccoglie</h3><p>Fuori orario risponde ai clienti al posto tuo: capisce il guasto, chiede i dati che mancano, dà i primi consigli sicuri. Sempre firmato, mai finto.</p></div>
+    <div class="cap"><div class="tag">Lavagna</div><h3>Apre le riparazioni</h3><p>Ogni richiesta diventa una voce sulla lavagna, con problema, indirizzo e la squadra proposta. Niente si perde tra un messaggio e l'altro.</p></div>
+    <div class="cap"><div class="tag">Squadre</div><h3>Organizza il giro</h3><p>Propone il programma per squadra e per zona, ottimizza i percorsi col traffico reale e rispetta i turni del weekend.</p></div>
+    <div class="cap"><div class="tag">Commesse</div><h3>Legge i fogli dalle foto</h3><p>Il tecnico fotografa il rapporto d'intervento: Oratio lo digitalizza, lo archivia e chiude la riparazione corrispondente.</p></div>
+    <div class="cap"><div class="tag">Officina &amp; ritiri</div><h3>Segue le macchine</h3><p>Sa quali macchine sono state ritirate, quali muletti sono in giro e cosa c'è sul banco da riparare. Niente resta dimenticato in laboratorio.</p></div>
+    <div class="cap"><div class="tag">Lingue</div><h3>Parla come i tuoi tecnici</h3><p>Scrive a ognuno nella sua lingua — italiano, rumeno, arabo — e traduce le risposte. La squadra capisce, tu ricevi tutto in chiaro.</p></div>
+  </div>
+</div></section>
 
-    <!-- Robotics Section -->
-    <section class="robotics">
-        <div class="container">
-            <div class="robotics-header">
-                <span class="robotics-badge">IL FUTURO DELLA ROBOTICA</span>
-                <h2 class="section-title">ORATIO: Il Linguaggio dei Robot</h2>
-                <p class="robotics-subtitle">
-                    Alexa capisce "Accendi la luce". ORATIO permette di PROGRAMMARE:<br>
-                    "Se la temperatura supera 25°C, accendi il condizionatore e invia notifica".<br>
-                    <strong>Non comandi vocali. Programmazione vera nella tua lingua.</strong>
-                </p>
-            </div>
+<section id="impara"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">La differenza vera</span>
+  <h2>Non automatizza. <span style="color:var(--ember)">Impara il tuo mestiere.</span></h2>
+  <p class="sec-lede">Tutti vendono "automazione". Oratio fa un'altra cosa: cattura il modo in cui <em>tu</em> ragioni — chi è un buon cliente, quando un guasto è urgente, come si accorpa un giro — e ogni giorno diventa più bravo a decidere come decideresti tu.</p>
+  <div class="loop">
+    <div class="step"><div class="n">OGNI GIORNO</div><h3>Osserva</h3><p>Guarda tutto quello che succede: le richieste, i tuoi programmi, chi mandi dove. Confronta le sue proposte con le tue scelte reali.</p><div class="arrow">→</div></div>
+    <div class="step"><div class="n">LA SERA</div><h3>Ti chiede</h3><p>Quando non capisce una tua decisione, te lo chiede con una domanda precisa. Tu rispondi in due parole, anche con un vocale.</p><div class="arrow">→</div></div>
+    <div class="step"><div class="n">PER SEMPRE</div><h3>Ricorda</h3><p>Ogni tua risposta diventa una regola nel suo quaderno. Non richiede mai due volte la stessa cosa. Cresce come cresce un allievo.</p></div>
+  </div>
+</div></section>
 
-            <div class="robotics-vision">
-                <div class="robotics-timeline-future">
-                    <div class="future-phase">
-                        <div class="future-year">2025-2026</div>
-                        <div class="future-content">
-                            <h3>Fase 1: Programmazione</h3>
-                            <p>Analisi dati, automazione, script</p>
-                        </div>
-                    </div>
-                    <div class="future-phase highlight">
-                        <div class="future-year">2027-2028</div>
-                        <div class="future-content">
-                            <h3>Fase 2: Robotica</h3>
-                            <p>Robot domestici, industriali, droni</p>
-                        </div>
-                    </div>
-                    <div class="future-phase">
-                        <div class="future-year">2029+</div>
-                        <div class="future-content">
-                            <h3>Fase 3: IoT Universale</h3>
-                            <p>Ogni dispositivo capisce ORATIO</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section id="perchi"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">Per chi è</span>
+  <h2>Per chiunque mandi tecnici sul campo e viva di interventi.</h2>
+  <p class="sec-lede">Se coordini una squadra e ti destreggi tra clienti, urgenze e gruppi WhatsApp, Oratio è tagliato per te. Si configura sul tuo mestiere, con i tuoi tecnici, le tue zone, le tue regole.</p>
+  <div class="forwho">
+    <span class="chip"><b>·</b> Refrigerazione</span>
+    <span class="chip"><b>·</b> Condizionamento &amp; clima</span>
+    <span class="chip"><b>·</b> Assistenza elettrodomestici</span>
+    <span class="chip"><b>·</b> Impianti &amp; idraulica</span>
+    <span class="chip"><b>·</b> Elettricisti</span>
+    <span class="chip"><b>·</b> Ascensori &amp; manutenzioni</span>
+    <span class="chip"><b>·</b> Grandi cucine &amp; ristorazione tecnica</span>
+  </div>
+</div></section>
 
-            <div class="robotics-examples">
-                <div class="robotics-example">
-                    <div class="robotics-icon">Robot Domestici</div>
-                    <h3>Robot Domestici</h3>
-                    <div class="code-example">
-                        <code>Se nessuno è in casa per più di 2 ore, il robot controlla tutte le stanze, chiude le finestre aperte e invia un report con foto.</code>
-                    </div>
-                    <p>Logica complessa, non solo comandi semplici</p>
-                </div>
+<section id="parti"><div class="wrap">
+  <span class="eyebrow sec-eyebrow">Come si parte</span>
+  <h2>Su misura per la tua azienda, senza gestionali da imparare.</h2>
+  <div class="start">
+    <div class="scard"><div class="num">1</div><h3>Demo sui tuoi casi</h3><p>Ci mostri una giornata tipo. Ti facciamo vedere Oratio ragionare sui tuoi clienti e sulle tue riparazioni, non su esempi finti.</p></div>
+    <div class="scard"><div class="num">2</div><h3>Lo montiamo per te</h3><p>Lo colleghiamo al tuo WhatsApp, con i tuoi tecnici, le tue zone e le tue regole. Te lo consegniamo pronto, chiavi in mano.</p></div>
+    <div class="scard"><div class="num">3</div><h3>Impara e cresce</h3><p>Da lì in poi lavora ogni giorno e impara da te. Tu lo correggi in due parole quando serve, lui migliora da solo.</p></div>
+  </div>
+</div></section>
 
-                <div class="robotics-example">
-                    
-                    <h3>Robot Industriali</h3>
-                    <div class="code-example">
-                        <code>Per ogni pacco in arrivo, verifica il peso, se supera 20kg usa il braccio rinforzato, altrimenti usa quello standard. Registra tutto nel database.</code>
-                    </div>
-                    <p>Operai programmano workflow complessi senza codice</p>
-                </div>
+<section id="demo" class="cta"><div class="wrap">
+  <span class="eyebrow sec-eyebrow" style="justify-content:center">Il prossimo passo</span>
+  <h2>Vuoi vedere Oratio ragionare sulla tua azienda?</h2>
+  <p class="sec-lede">Raccontaci che assistenza fai e quanti tecnici coordini. Ti prepariamo una demo sui tuoi casi reali.</p>
+  <div class="actions">
+    <a class="btn primary" href="mailto:info@oratio.dev?subject=Voglio%20una%20demo%20di%20Oratio">Richiedi una demo</a>
+    <a class="btn ghost" href="mailto:info@oratio.dev">Scrivici due righe</a>
+  </div>
+  <p class="mailnote">info@oratio.dev</p>
+</div></section>
 
-                <div class="robotics-example">
-                    
-                    <h3>Droni</h3>
-                    <div class="code-example">
-                        <code>Ispeziona il perimetro ogni 30 minuti. Se rilevi movimento, scatta foto, invia alert e segui l'oggetto mantenendo 10 metri di distanza.</code>
-                    </div>
-                    <p>Automazione intelligente, non solo telecomando vocale</p>
-                </div>
-            </div>
+<footer><div class="wrap">
+  <span>Oratio · il coordinatore digitale che impara a ragionare come te</span>
+  <span><a href="mailto:info@oratio.dev">info@oratio.dev</a> · oratio.dev</span>
+</div></footer>
 
-            <div class="robotics-impact">
-                <h3>L'Impatto sulla Robotica</h3>
-                <div class="robotics-stats-grid">
-                    <div class="robotics-stat-card">
-                        <div class="robotics-stat-icon">Costi</div>
-                        <div class="robotics-stat-title">Costi -90%</div>
-                        <p>Programmazione robot da $10,000 a $1,000</p>
-                    </div>
-                    <div class="robotics-stat-card">
-                        <div class="robotics-stat-icon">Velocità</div>
-                        <div class="robotics-stat-title">Setup 100x Più Veloce</div>
-                        <p>Da settimane a minuti per configurare un robot</p>
-                    </div>
-                    <div class="robotics-stat-card">
-                        <div class="robotics-stat-icon">Accessibilità</div>
-                        <div class="robotics-stat-title">Accessibile a Tutti</div>
-                        <p>Chiunque può comandare e programmare robot</p>
-                    </div>
-                    <div class="robotics-stat-card">
-                        <div class="robotics-stat-icon">Universale</div>
-                        <div class="robotics-stat-title">Standard Universale</div>
-                        <p>Un linguaggio per tutti i robot del mondo</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="robotics-quote">
-                <blockquote>
-                    "Alexa e Siri capiscono comandi semplici: 'Accendi la luce'.<br>
-                    ORATIO permette di PROGRAMMARE robot con logica complessa:<br>
-                    'Se la temperatura supera 25 gradi per più di 10 minuti, attiva il condizionatore e invia notifica'.<br><br>
-                    La differenza? Comandi vocali vs Programmazione vera nella tua lingua."
-                </blockquote>
-                <cite>— La Vera Differenza</cite>
-            </div>
-
-            <div class="robotics-market">
-                <h3>Il Mercato della Robotica</h3>
-                <div class="market-stats">
-                    <div class="market-stat">
-                        <span class="market-number">$150B</span>
-                        <span class="market-label">Mercato robotica 2030</span>
-                    </div>
-                    <div class="market-stat">
-                        <span class="market-number">100M+</span>
-                        <span class="market-label">Robot entro 2035</span>
-                    </div>
-                    <div class="market-stat">
-                        <span class="market-number">1 Linguaggio</span>
-                        <span class="market-label">ORATIO per tutti</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Perché ORATIO è Rivoluzionario</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    
-                    <h3>Linguaggio Naturale</h3>
-                    <p>Parli la tua lingua, funziona. Nessuna sintassi da imparare, nessun codice criptico.</p>
-                </div>
-                <div class="feature-card">
-                    
-                    <h3>Esecuzione Diretta</h3>
-                    <p>Non genera Python. Esegue direttamente. Nessun copia/incolla, nessun intermediario.</p>
-                </div>
-                <div class="feature-card">
-                    
-                    <h3>Context-Aware</h3>
-                    <p>Ricorda cosa hai fatto. Capisce il contesto. Si adatta al tuo stile.</p>
-                </div>
-                <div class="feature-card">
-                    
-                    <h3>Tollerante</h3>
-                    <p>Errori di battitura? No problem. Grammatica imperfetta? Funziona lo stesso.</p>
-                </div>
-                <div class="feature-card">
-                    
-                    <h3>Evolutivo</h3>
-                    <p>Impara dalle tue preferenze. Più lo usi, più diventa tuo.</p>
-                </div>
-                <div class="feature-card">
-                    
-                    <h3>Italian First</h3>
-                    <p>Prima una lingua, poi globale. Democratizza la programmazione.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI-Powered Expansion Section -->
-    <section class="ai-powered">
-        <div class="container">
-            <div class="ai-header">
-                <span class="ai-badge">🤖 NOVITÀ</span>
-                <h2 class="section-title">ORATIO Si Espande Autonomamente</h2>
-                <p class="ai-subtitle">
-                    L'AI non genera solo codice per te.<br>
-                    <strong>L'AI espande ORATIO stesso. Automaticamente.</strong>
-                </p>
-            </div>
-
-            <div class="ai-stats">
-                <div class="ai-stat">
-                    <div class="ai-stat-number">15+</div>
-                    <div class="ai-stat-label">Operazioni Generate</div>
-                </div>
-                <div class="ai-stat">
-                    <div class="ai-stat-number">500+</div>
-                    <div class="ai-stat-label">Righe di Codice</div>
-                </div>
-                <div class="ai-stat">
-                    <div class="ai-stat-number">∞</div>
-                    <div class="ai-stat-label">Crescita Continua</div>
-                </div>
-                <div class="ai-stat">
-                    <div class="ai-stat-number">100%</div>
-                    <div class="ai-stat-label">Automatico</div>
-                </div>
-            </div>
-
-            <div class="ai-features-grid">
-                <div class="ai-feature">
-                    <h3>📊 Analisi Automatica</h3>
-                    <p>L'AI analizza cosa manca in ORATIO e identifica le operazioni più richieste.</p>
-                </div>
-                <div class="ai-feature">
-                    <h3>⚡ Generazione Codice</h3>
-                    <p>GPT-4 scrive codice production-ready con test, docstring e gestione errori.</p>
-                </div>
-                <div class="ai-feature">
-                    <h3>🧪 Test Automatici</h3>
-                    <p>Ogni operazione viene testata automaticamente prima dell'integrazione.</p>
-                </div>
-                <div class="ai-feature">
-                    <h3>🚀 Deploy Istantaneo</h3>
-                    <p>Nuove operazioni integrate e disponibili in minuti, non giorni.</p>
-                </div>
-            </div>
-
-            <div class="ai-operations">
-                <h3>Operazioni Già Disponibili</h3>
-                <div class="operations-grid">
-                    <div class="operation-tag">📁 File Operations</div>
-                    <div class="operation-tag">📊 CSV/JSON</div>
-                    <div class="operation-tag">🌐 HTTP/API</div>
-                    <div class="operation-tag">🔄 Loops</div>
-                    <div class="operation-tag">🕷️ Web Scraping</div>
-                    <div class="operation-tag">➕ E altro...</div>
-                </div>
-            </div>
-
-            <div class="ai-cta">
-                <p class="ai-cta-text">
-                    <strong>Questo è solo l'inizio.</strong><br>
-                    ORATIO cresce ogni giorno, autonomamente, guidato dall'AI.
-                </p>
-                <a href="https://github.com/manuzz88/oratio" class="btn btn-primary btn-glow">
-                    Vedi il Codice su GitHub
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Not ChatGPT Section -->
-    <section class="why-not-chatgpt">
-        <div class="container">
-            <div class="why-header">
-                <span class="why-badge">LA DOMANDA CRUCIALE</span>
-                <h2 class="section-title">Perché Non Usare ChatGPT?</h2>
-                <p class="why-subtitle">
-                    ChatGPT, Claude, DeepSeek generano codice Python.<br>
-                    ORATIO <strong>È</strong> il codice. Questa è la differenza.
-                </p>
-            </div>
-
-            <div class="comparison-table">
-                <div class="comparison-row table-header">
-                    <div class="comparison-cell"></div>
-                    <div class="comparison-cell">ChatGPT / Claude</div>
-                    <div class="comparison-cell table-highlight">ORATIO</div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell label">Cosa fa</div>
-                    <div class="comparison-cell">
-                        
-                        <p>Genera codice Python nell'IDE (devi saperlo leggere)</p>
-                    </div>
-                    <div class="comparison-cell highlight">
-                        
-                        <p>Esegue direttamente, zero Python generato</p>
-                    </div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell label">Workflow</div>
-                    <div class="comparison-cell">
-                        
-                        <p>Chiedi → AI genera Python → Devi capirlo → Debug → Ripeti</p>
-                    </div>
-                    <div class="comparison-cell highlight">
-                        
-                        <p>Scrivi nella tua lingua → Esegui. Fine.</p>
-                    </div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell label">Riproducibilità</div>
-                    <div class="comparison-cell">
-                        
-                        <p>Ogni volta genera codice diverso</p>
-                    </div>
-                    <div class="comparison-cell highlight">
-                        
-                        <p>Stesso input = Stesso output sempre</p>
-                    </div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell label">Versioning</div>
-                    <div class="comparison-cell">
-                        
-                        <p>Impossibile fare Git del prompt</p>
-                    </div>
-                    <div class="comparison-cell highlight">
-                        
-                        <p>File .ora in Git come qualsiasi codice</p>
-                    </div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell label">Debugging</div>
-                    <div class="comparison-cell">
-                        
-                        <p>Debug del Python generato dall'AI (devi sapere Python!)</p>
-                    </div>
-                    <div class="comparison-cell highlight">
-                        
-                        <p>Errori nella tua lingua, zero Python da capire</p>
-                    </div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell label">Costo</div>
-                    <div class="comparison-cell">
-                        
-                        <p>$20/mese + API calls ogni volta</p>
-                    </div>
-                    <div class="comparison-cell highlight">
-                        
-                        <p>Open source, esegui localmente gratis</p>
-                    </div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell label">Automazione</div>
-                    <div class="comparison-cell">
-                        
-                        <p>Non puoi automatizzare un prompt</p>
-                    </div>
-                    <div class="comparison-cell highlight">
-                        
-                        <p>Script .ora in cron, CI/CD, produzione</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="why-examples">
-                <div class="why-example-card">
-                    <h3>× Con ChatGPT/Windsurf/Cursor</h3>
-                    <div class="why-steps">
-                        <div class="step">1. Apri VS Code con Copilot/Windsurf</div>
-                        <div class="step">2. Chat laterale: "Analizza vendite.csv"</div>
-                        <div class="step">3. AI genera codice Python nel file</div>
-                        <div class="step">4. Devi capire il codice generato</div>
-                        <div class="step">5. Installa dipendenze (pandas, matplotlib...)</div>
-                        <div class="step">6. python analysis.py</div>
-                        <div class="step">7. Errore: percorso file sbagliato</div>
-                        <div class="step">8. Modifica il codice Python manualmente</div>
-                        <div class="step">9. Errore: colonna non trovata</div>
-                        <div class="step">10. Debug del Python generato...</div>
-                    </div>
-                    <p class="time">Tempo: 10-15 minuti + devi sapere Python</p>
-                </div>
-
-                <div class="why-example-card highlight">
-                    <h3>✓ Con ORATIO</h3>
-                    <div class="why-steps">
-                        <div class="step">1. Crea analisi.ora</div>
-                        <div class="step">2. Scrivi: "Carica vendite.csv e calcola la media"</div>
-                        <div class="step">3. oratio run analisi.ora</div>
-                        <div class="step">4. Fatto. Nessun Python da capire.</div>
-                    </div>
-                    <p class="time">Tempo: 30 secondi + zero conoscenza Python</p>
-                </div>
-            </div>
-
-            <div class="why-quote">
-                <blockquote>
-                    "Windsurf, Cursor, Copilot generano <strong>Python</strong> che devi capire e debuggare.<br>
-                    ORATIO <strong>È</strong> il linguaggio. Non genera nulla, esegue direttamente.<br><br>
-                    La differenza? Con gli AI IDE devi ancora sapere programmare.<br>
-                    Con ORATIO, parli e basta."
-                </blockquote>
-                <cite>— La Vera Rivoluzione</cite>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparison Section -->
-    <section class="comparison">
-        <div class="container">
-            <h2 class="section-title">ORATIO vs Altri Tool</h2>
-            <div class="comparison-grid">
-                <div class="comparison-card">
-                    <h3>Python</h3>
-                    <div class="comparison-code">
-                        <pre><code>import pandas as pd
-df = pd.read_csv('vendite.csv')
-filtered = df[df['importo'] > 1000]
-mean = filtered['importo'].mean()
-print(f"Media: {mean}")</code></pre>
-                    </div>
-                    <p class="comparison-label">× Complesso, sintassi rigida</p>
-                </div>
-                <div class="comparison-card highlight">
-                    <h3>ORATIO</h3>
-                    <div class="comparison-code">
-                        <pre><code>Carica vendite.csv.
-Filtra dove importo > 1000.
-Calcola la media.
-Stampa il risultato.</code></pre>
-                    </div>
-                    <p class="comparison-label">✓ Semplice, naturale, immediato</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Demo Section -->
-    <section id="demo" class="demo">
-        <div class="container">
-            <h2 class="section-title">Guarda ORATIO in Azione</h2>
-            <div class="demo-container">
-                <div class="demo-video">
-                    <video controls width="100%">
-                        <source src="video_demo_oratio.mp4" type="video/mp4">
-                        Il tuo browser non supporta il tag video.
-                    </video>
-                </div>
-                <div class="demo-features">
-                    <h3>Cosa Puoi Fare Oggi</h3>
-                    <p class="demo-intro">Questo è solo l'inizio. ORATIO è in continua evoluzione.</p>
-                    <ul class="demo-list">
-                        <li>✓ Analisi dati con CSV, Excel, JSON</li>
-                        <li>✓ Statistiche e calcoli matematici</li>
-                        <li>✓ Visualizzazioni e grafici</li>
-                        <li>✓ Filtri e trasformazioni dati</li>
-                        <li>✓ Report automatici</li>
-                        <li>✓ Automazione workflow</li>
-                    </ul>
-                    <div class="demo-future">
-                        <p><strong>Prossimamente:</strong></p>
-                        <p>→ Database (SQL, MongoDB)<br>
-                        → API e Web scraping<br>
-                        → Machine Learning<br>
-                        → Controllo robot e IoT</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="download">
-        <div class="container">
-            <div class="download-content">
-                <h2>Inizia Ora</h2>
-                <p>ORATIO è open source e gratuito. Inizia in 5 minuti.</p>
-                <div class="download-buttons">
-                    <a href="https://github.com/manuzz88/oratio" class="btn btn-large btn-primary" target="_blank">
-                        Download
-                    </a>
-                    <a href="https://github.com/manuzz88/oratio#readme" class="btn btn-large btn-secondary" target="_blank">
-                        Documentazione
-                    </a>
-                </div>
-                <div class="install-command">
-                    <code>pip install oratio</code>
-                    <button class="copy-btn" onclick="copyInstall()">Copy</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <img src="logo_oratio.png" alt="ORATIO" class="logo-img">
-                    </div>
-                    <p>L'eloquenza del codice</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>ORATIO</h4>
-                        <ul>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#demo">Demo</a></li>
-                            <li><a href="https://github.com/manuzz88/oratio">GitHub</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Community</h4>
-                        <ul>
-                            <li><a href="https://github.com/manuzz88/oratio">GitHub</a></li>
-                            <li><a href="https://t.me/manu_lz88">Telegram</a></li>
-                            <li><a href="https://twitter.com/oratio_lang">Twitter</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Creator</h4>
-                        <ul>
-                            <li><a href="https://t.me/manu_lz88">Contact</a></li>
-                            <li><a href="https://github.com/manuzz88">Manuel Lazzaro</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ORATIO by Manuel Lazzaro. MIT License.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function copyInstall() {
-            navigator.clipboard.writeText('pip install oratio');
-            alert('Comando copiato!');
-        }
-
-        // Hamburger menu
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-        
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
